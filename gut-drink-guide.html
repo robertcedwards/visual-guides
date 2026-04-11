@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Gut Shake — A Visual Guide to the Anti-Inflammatory Fiber & Probiotic Drink</title>
+<style>
+  :root{
+    --bg:#f4f1e8;
+    --ink:#1c221a;
+    --muted:#5a6355;
+    --accent:#5b8a3a;
+    --accent-soft:#b5d49a;
+    --accent-deep:#3f6326;
+    --berry:#7a2e4a;
+    --cream:#fffbf1;
+    --card:#fffdf5;
+    --line:#d6d1bf;
+    --good:#3a6b35;
+    --bad:#a8341f;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(28,34,26,.07);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Iowan Old Style',serif;line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:48px 28px 96px}
+  header.hero{
+    text-align:center;
+    padding:56px 24px 48px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:48px;
+    background:
+      radial-gradient(ellipse at top, rgba(91,138,58,.10), transparent 60%),
+      var(--bg);
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-size:12px;
+    color:var(--accent);
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-weight:700;
+    margin-bottom:14px;
+  }
+  h1{
+    font-size:54px;
+    line-height:1.05;
+    margin:0 0 18px;
+    letter-spacing:-.02em;
+  }
+  .sub{
+    font-size:19px;
+    color:var(--muted);
+    max-width:660px;
+    margin:0 auto;
+    font-style:italic;
+  }
+  h2{
+    font-size:32px;
+    margin:64px 0 8px;
+    letter-spacing:-.01em;
+    border-top:2px solid var(--ink);
+    padding-top:28px;
+  }
+  h2 .num{
+    display:inline-block;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:13px;
+    color:var(--accent);
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    vertical-align:middle;
+    margin-right:14px;
+    padding:4px 10px;
+    border:1px solid var(--accent);
+    border-radius:999px;
+  }
+  h3{font-size:21px;margin:32px 0 8px;color:var(--ink)}
+  p{margin:10px 0 16px}
+  .lede{font-size:18px;color:var(--muted);max-width:720px}
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+    margin:24px 0;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:20px 22px;
+    box-shadow:var(--shadow);
+  }
+  .card h4{
+    margin:0 0 8px;
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+  }
+  .card p{margin:6px 0;font-size:15px;color:var(--muted)}
+  .card .stat{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:32px;
+    color:var(--accent);
+    font-weight:700;
+    display:block;
+    margin:6px 0 2px;
+    letter-spacing:-.01em;
+  }
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:24px 0;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    font-size:15px;
+  }
+  th, td{
+    padding:14px 16px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  th{
+    background:#eae6d2;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    text-transform:uppercase;
+    font-size:12px;
+    letter-spacing:.08em;
+  }
+  tr:last-child td{border-bottom:none}
+
+  .callout{
+    margin:24px 0;
+    padding:18px 22px;
+    border-left:4px solid var(--accent);
+    background:#edf3e1;
+    border-radius:0 8px 8px 0;
+  }
+  .callout.warn{
+    border-left-color:var(--bad);
+    background:#fbe7e2;
+  }
+  .callout.good{
+    border-left-color:var(--good);
+    background:#e4efda;
+  }
+  .callout strong{font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:13px;display:block;margin-bottom:6px}
+
+  .vs{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin:24px 0;
+  }
+  .vs > div{
+    padding:22px 24px;
+    border-radius:10px;
+    border:1px solid var(--line);
+    background:var(--card);
+    box-shadow:var(--shadow);
+  }
+  .vs .a-side{border-top:4px solid #c9a24a}
+  .vs .b-side{border-top:4px solid var(--accent)}
+  .vs h4{
+    margin:0 0 6px;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    text-transform:uppercase;
+    font-size:13px;
+    letter-spacing:.08em;
+  }
+  .vs .tag{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+  .vs ul{margin:10px 0 0 0;padding-left:18px;color:var(--muted);font-size:15px}
+  .vs li{margin:6px 0}
+
+  /* Study results bars */
+  .bars{margin:24px 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;box-shadow:var(--shadow)}
+  .bars h4{margin:0 0 18px;font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.08em}
+  .bar-row{display:grid;grid-template-columns:140px 1fr 70px;gap:12px;align-items:center;margin:10px 0;font-size:14px}
+  .bar-row .label{color:var(--muted);font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;font-size:12px;letter-spacing:.06em}
+  .bar-row .track{background:#ece8d4;height:18px;border-radius:99px;overflow:hidden}
+  .bar-row .fill{height:100%;border-radius:99px}
+  .bar-row .val{font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--accent-deep);text-align:right}
+  .fill.control{background:#c9b987;width:6%}
+  .fill.omega{background:#c9a24a;width:32%}
+  .fill.fiber{background:#9bbf6e;width:40%}
+  .fill.shake{background:var(--accent);width:88%}
+
+  /* Recipe cards */
+  .recipe{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:28px 30px;
+    margin:28px 0;
+    box-shadow:var(--shadow);
+    position:relative;
+  }
+  .recipe .rtag{
+    display:inline-block;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:11px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--cream);
+    background:var(--accent);
+    padding:4px 12px;
+    border-radius:99px;
+    margin-bottom:10px;
+  }
+  .recipe.intro .rtag{background:#9bbf6e;color:var(--ink)}
+  .recipe.full .rtag{background:var(--accent-deep)}
+  .recipe.df .rtag{background:var(--berry)}
+  .recipe h3{margin:0 0 4px;font-size:24px}
+  .recipe .desc{color:var(--muted);font-size:15px;font-style:italic;margin:0 0 18px}
+  .recipe .ingredients{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:10px;
+    margin:18px 0;
+  }
+  .recipe .ing{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    padding:10px 12px;
+    background:#f9f5e6;
+    border-radius:8px;
+    font-size:14px;
+  }
+  .recipe .ing .dot{
+    width:10px;height:10px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px;
+  }
+  .recipe .ing b{display:block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+  .recipe .ing span{color:var(--muted);font-size:13px}
+  .recipe .method{
+    margin-top:14px;
+    padding-top:16px;
+    border-top:1px dashed var(--line);
+    font-size:14px;
+    color:var(--muted);
+  }
+  .recipe .method b{color:var(--ink);font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;font-size:12px;letter-spacing:.08em;display:block;margin-bottom:6px}
+
+  /* Fiber diagram */
+  .fiber-map{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:14px;
+    margin:24px 0;
+  }
+  .fiber-map .fm{
+    padding:16px 18px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    text-align:center;
+    box-shadow:var(--shadow);
+  }
+  .fiber-map .fm .icon{
+    font-size:28px;
+    display:block;
+    margin-bottom:6px;
+  }
+  .fiber-map .fm b{
+    display:block;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    margin-bottom:4px;
+  }
+  .fiber-map .fm span{font-size:13px;color:var(--muted)}
+
+  /* Ramp-up timeline */
+  .ramp{
+    margin:24px 0;
+    padding:24px 28px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    box-shadow:var(--shadow);
+  }
+  .ramp h4{margin:0 0 16px;font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.08em}
+  .ramp-track{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+  .ramp-step{
+    padding:14px;
+    background:#f1ecd9;
+    border-radius:8px;
+    text-align:center;
+    position:relative;
+  }
+  .ramp-step .w{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase}
+  .ramp-step b{display:block;font-size:15px;margin:4px 0}
+  .ramp-step span{font-size:12px;color:var(--muted)}
+  .ramp-step:nth-child(2){background:#ebeecd}
+  .ramp-step:nth-child(3){background:#dfe8c2}
+  .ramp-step:nth-child(4){background:#cde0a9}
+
+  footer{
+    margin-top:80px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+    text-align:center;
+    font-size:14px;
+    color:var(--muted);
+    font-style:italic;
+  }
+
+  .pull{
+    font-family:Georgia,serif;
+    font-size:24px;
+    line-height:1.4;
+    color:var(--ink);
+    font-style:italic;
+    margin:32px auto;
+    padding:16px 28px;
+    border-left:3px solid var(--accent);
+    max-width:780px;
+  }
+
+  @media (max-width:640px){
+    h1{font-size:38px}
+    h2{font-size:25px}
+    .vs{grid-template-columns:1fr}
+    .ramp-track{grid-template-columns:1fr 1fr}
+    .bar-row{grid-template-columns:100px 1fr 50px}
+    .wrap{padding:24px 18px 64px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">A Practical Guide</div>
+  <h1>The Gut Shake</h1>
+  <p class="sub">Why a two-ingredient fermented drink just out-performed omega-3 on inflammation — and how to actually make it at home.</p>
+</header>
+
+<p class="lede">Everyone treats omega-3 as the final boss of inflammation. But a recent 6-week human trial found that a simple shake of <em>kefir + a mix of fibers</em> lowered a much broader range of inflammatory markers than omega-3 did. The twist: it wasn't suppressing inflammation from the top down — it was rebuilding the gut ecosystem underneath it. This guide walks you through what the study did, why it matters, and three recipe versions you can actually make in your kitchen tomorrow morning.</p>
+
+<div class="pull">"This shake didn't just suppress inflammation the way omega-3 does. It changed the environment in the gut so the body produced its own anti-inflammatory signals."</div>
+
+<h2><span class="num">01</span> The Study at a Glance</h2>
+<p>A six-week human intervention measured <strong>90+ inflammatory proteins</strong> before and after — not just CRP. Four groups, daily intake, real blood panels.</p>
+
+<div class="grid">
+  <div class="card">
+    <h4>Duration</h4>
+    <span class="stat">6 wks</span>
+    <p>Daily intake, real people, blood panels before & after.</p>
+  </div>
+  <div class="card">
+    <h4>Markers Tracked</h4>
+    <span class="stat">90+</span>
+    <p>A full panel of inflammatory proteins, not a single CRP reading.</p>
+  </div>
+  <div class="card">
+    <h4>Groups Compared</h4>
+    <span class="stat">4</span>
+    <p>Control · Omega-3 · Inulin fiber · Synbiotic shake.</p>
+  </div>
+  <div class="card">
+    <h4>Winner</h4>
+    <span class="stat">Shake</span>
+    <p>Broader and deeper reductions than omega-3, across more markers.</p>
+  </div>
+</div>
+
+<div class="bars">
+  <h4>Relative breadth of inflammation reduction</h4>
+  <div class="bar-row"><div class="label">Control</div><div class="track"><div class="fill control"></div></div><div class="val">baseline</div></div>
+  <div class="bar-row"><div class="label">Omega-3</div><div class="track"><div class="fill omega"></div></div><div class="val">narrow</div></div>
+  <div class="bar-row"><div class="label">Inulin fiber</div><div class="track"><div class="fill fiber"></div></div><div class="val">modest</div></div>
+  <div class="bar-row"><div class="label">Synbiotic shake</div><div class="track"><div class="fill shake"></div></div><div class="val">broad</div></div>
+  <p style="font-size:13px;color:var(--muted);margin-top:14px;font-style:italic">Illustrative visualization based on the described findings — the shake lowered a clearly wider range of inflammatory markers, including IL-6 and gut-lining immune signals, with bigger effect sizes than omega-3.</p>
+</div>
+
+<div class="callout good">
+  <strong>The butyrate link</strong>
+  After the shake, blood levels of butyrate (a short-chain fatty acid produced when gut bacteria ferment fiber) rose — and the higher butyrate climbed, the more IL-6 fell. IL-6 is one of the main drivers of chronic, low-grade inflammation tied to fatigue, brain fog, metabolic issues and autoimmune flares.
+</div>
+
+<h2><span class="num">02</span> Top-Down vs. Bottom-Up Inflammation</h2>
+<p>This isn't an either/or. Omega-3 and the gut shake work through different mechanisms — and for many people, combining them is the strongest play.</p>
+
+<div class="vs">
+  <div class="a-side">
+    <div class="tag">Top-down</div>
+    <h4>Omega-3</h4>
+    <p style="font-size:14px;color:var(--muted);margin:6px 0 0">Dampens inflammatory signaling directly. Reliable, but narrower.</p>
+    <ul>
+      <li>Lowers classic markers like TNF-α</li>
+      <li>Works regardless of gut status</li>
+      <li>Best for acute injury, specific immune conditions</li>
+      <li>Doesn't fix an irritated gut lining</li>
+    </ul>
+  </div>
+  <div class="b-side">
+    <div class="tag">Bottom-up</div>
+    <h4>Kefir + Fiber Shake</h4>
+    <p style="font-size:14px;color:var(--muted);margin:6px 0 0">Rebuilds the gut ecosystem so the body makes its own anti-inflammatory signals.</p>
+    <ul>
+      <li>Lowers IL-6 and gut-lining immune markers</li>
+      <li>Boosts butyrate and microbial diversity</li>
+      <li>Best for bloating, fatigue, brain fog, reflux, IBS-ish symptoms</li>
+      <li>Strengthens the gut barrier itself</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout">
+  <strong>Who benefits most</strong>
+  People with bloating, food sensitivities, loose stools or constipation, reflux, IBS-type symptoms — <em>and</em> people with no obvious gut symptoms who still deal with fatigue, joint pain, low mood, or a background hum of inflammation that never quite goes away. The gut is the body's largest immune organ; when its lining is irritated, inflammation leaks into the bloodstream.
+</div>
+
+<h2><span class="num">03</span> The Two Ingredients</h2>
+<p>Strip the shake down and there are really just two components doing the work. Both rely on the same principle: <strong>diversity beats potency</strong>.</p>
+
+<h3>Component 1 — Live-culture Kefir</h3>
+<p>The trial used <strong>170 ml of goat milk kefir per day</strong> containing 27 naturally occurring live bacterial cultures. This is the key distinction from a single-strain probiotic capsule: a real fermented food delivers an entire microbial ecosystem. Different bacteria do different jobs — some produce short-chain fatty acids, some reinforce the gut lining, some interact with immune cells — and diversity creates resilience.</p>
+
+<h3>Component 2 — A Fiber <em>Blend</em>, Not a Fiber</h3>
+<p>The trial used <strong>10 g/day of a blend containing ~18 different fibers</strong> (inulin, resistant starch, pectin, beta-glucans, and others). Each fiber feeds a different subset of microbes. One fiber only feeds one small group — a blend feeds the whole ecosystem.</p>
+
+<div class="fiber-map">
+  <div class="fm"><span class="icon">🌱</span><b>Inulin</b><span>Feeds bifidobacteria; classic prebiotic</span></div>
+  <div class="fm"><span class="icon">🥔</span><b>Resistant Starch</b><span>Top butyrate producer; cooked-&-cooled potato or rice</span></div>
+  <div class="fm"><span class="icon">🌾</span><b>PHGG / Acacia</b><span>Gentle, low-gas, broadly tolerated</span></div>
+  <div class="fm"><span class="icon">🍊</span><b>Pectin</b><span>From fruit; soothes gut lining</span></div>
+  <div class="fm"><span class="icon">🌰</span><b>Psyllium Husk</b><span>Bulking fiber; stool regularity</span></div>
+  <div class="fm"><span class="icon">🫐</span><b>Polyphenol Fibers</b><span>Berries, flax — feed microbes + antioxidants</span></div>
+</div>
+
+<h3>The Full Prebiotic Menu — Options for the Mix</h3>
+<p>Beyond the common ones above, here is the broader palette of prebiotic fibers and fermentable carbohydrates you can rotate into the blend. Each targets a different subset of gut microbes; the goal is variety, not any single "best" fiber. Pick 3–6 at a time and rotate over weeks.</p>
+
+<div class="fiber-map">
+  <div class="fm"><span class="icon">🌿</span><b>Arabinan</b><span>Pectin-derived; feeds Bacteroides &amp; bifidobacteria</span></div>
+  <div class="fm"><span class="icon">🌿</span><b>Arabinogalactan</b><span>From larch; immune-modulating, gentle</span></div>
+  <div class="fm"><span class="icon">🌾</span><b>Arabinoxylan</b><span>From wheat/rye bran; strong butyrate producer</span></div>
+  <div class="fm"><span class="icon">🌾</span><b>Beta-Glucan</b><span>Oats &amp; barley; cholesterol + immune support</span></div>
+  <div class="fm"><span class="icon">🍄</span><b>Chitin</b><span>Mushroom &amp; insect fiber; novel microbial substrate</span></div>
+  <div class="fm"><span class="icon">🥬</span><b>Cellulose / Hemicellulose</b><span>Plant cell walls; bulk + slow fermentation</span></div>
+  <div class="fm"><span class="icon">🌱</span><b>Fructooligosaccharide (FOS)</b><span>Short-chain inulin relative; feeds bifidobacteria</span></div>
+  <div class="fm"><span class="icon">🌰</span><b>Galactan</b><span>From legumes; broad microbial feeder</span></div>
+  <div class="fm"><span class="icon">🥛</span><b>Galacto-oligosaccharide (GOS)</b><span>Derived from lactose; infant-gut style bifidogenic</span></div>
+  <div class="fm"><span class="icon">🫘</span><b>Guar Gum (PHGG)</b><span>Gentle, low-gas, broadly tolerated</span></div>
+  <div class="fm"><span class="icon">🌽</span><b>Isomaltooligosaccharide (IMO)</b><span>Mildly sweet; partially fermentable</span></div>
+  <div class="fm"><span class="icon">🌱</span><b>Inulin</b><span>Chicory root; classic bifidogenic prebiotic</span></div>
+  <div class="fm"><span class="icon">🌴</span><b>Mannan</b><span>From konjac/yeast; binds toxins, feeds microbes</span></div>
+  <div class="fm"><span class="icon">🍊</span><b>Pectin</b><span>From fruit; soothes gut lining</span></div>
+  <div class="fm"><span class="icon">🥔</span><b>Resistant Starch</b><span>Cooked-&amp;-cooled potato/rice; top butyrate producer</span></div>
+  <div class="fm"><span class="icon">🌽</span><b>Xylooligosaccharide (XOS)</b><span>Low dose, high bifidogenic effect</span></div>
+  <div class="fm"><span class="icon">🌾</span><b>Xylan</b><span>Plant cell wall; slow fermentation</span></div>
+  <div class="fm"><span class="icon">🌿</span><b>Xyloglucan</b><span>From fruits/seeds; gentle microbial substrate</span></div>
+</div>
+
+<div class="callout">
+  <strong>How to use this list</strong>
+  Don't try to include all 18 at once — that's a recipe for a very unhappy gut. Start with 2–3 gentler options (PHGG/guar gum, partially hydrolyzed arabinogalactan, GOS), then rotate new ones in as tolerance builds. Aim for <em>diversity over weeks</em>, not diversity in a single glass.
+</div>
+
+<h2><span class="num">04</span> The Recipes</h2>
+<p>Three versions, same principle. Start with the <strong>Starter</strong> if you've never done a fiber-forward shake before — going straight to the Full Spectrum version on day one is a reliable way to feel awful for a week.</p>
+
+<div class="recipe intro">
+  <span class="rtag">Version 1 · Starter</span>
+  <h3>The Gentle On-Ramp</h3>
+  <p class="desc">For first-timers or sensitive guts. Two fibers only, half-size kefir pour.</p>
+  <div class="ingredients">
+    <div class="ing"><div class="dot"></div><div><b>Plain Kefir</b><span>50–100 ml (cow or goat, unsweetened)</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>PHGG or Acacia Fiber</b><span>½ tsp (~2 g) — gentlest start</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Ground Flax</b><span>1 tsp</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Berries</b><span>Small handful (blueberries or raspberries)</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Water or ice</b><span>To thin out texture</span></div></div>
+  </div>
+  <div class="method">
+    <b>Method</b>
+    Blend kefir, fiber, flax and berries with a splash of water or a few ice cubes until smooth. Drink once per day, ideally with or just after a meal. Hold at this level for at least 5–7 days before scaling up.
+  </div>
+</div>
+
+<div class="recipe full">
+  <span class="rtag">Version 2 · Full Spectrum</span>
+  <h3>The Home Replica of the Study Shake</h3>
+  <p class="desc">Four fibers + full kefir pour + polyphenol boost. The closest realistic home version of what the trial participants drank.</p>
+  <div class="ingredients">
+    <div class="ing"><div class="dot"></div><div><b>Plain Kefir</b><span>150–200 ml (goat milk if tolerated)</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Inulin Powder</b><span>½ tsp (~2 g)</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>PHGG / Acacia Fiber</b><span>½ tsp (~2 g)</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Resistant Starch</b><span>½ tsp raw potato starch (~2 g)</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Psyllium Husk</b><span>½ tsp (if you tolerate it)</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Ground Flax</b><span>1 tbsp</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Berries</b><span>Small handful — adds polyphenols</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Water or ice</b><span>Splash, to texture</span></div></div>
+  </div>
+  <div class="method">
+    <b>Method</b>
+    Blend everything for 20–30 seconds. Total fiber lands around 5–7 g from the powders plus whole-food fiber from flax and berries. Drink once daily. Don't heat the kefir — you'll kill the cultures. Don't cook the potato starch either; raw is what makes it "resistant."
+  </div>
+</div>
+
+<div class="recipe df">
+  <span class="rtag">Version 3 · Dairy-Free</span>
+  <h3>The Water Kefir Variant</h3>
+  <p class="desc">If dairy doesn't sit well. Note: the trial used dairy kefir, so this is a reasonable but not identical substitute.</p>
+  <div class="ingredients">
+    <div class="ing"><div class="dot"></div><div><b>Water Kefir or Coconut Kefir</b><span>150–200 ml, plain, unsweetened</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>PHGG / Acacia Fiber</b><span>½ tsp</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Resistant Starch</b><span>½ tsp raw potato starch</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Ground Flax</b><span>1 tbsp</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Berries</b><span>Small handful</span></div></div>
+  </div>
+  <div class="method">
+    <b>Method</b>
+    Shake or blend. Because water kefir has a different microbial profile than dairy kefir, consider rotating in sauerkraut juice, kimchi brine, or another live-fermented food during the week to broaden your microbial intake.
+  </div>
+</div>
+
+<div class="callout good">
+  <strong>Minimalist fallback</strong>
+  If four fibers feels like too much, the two with the broadest usefulness and lowest gas risk are <em>partially hydrolyzed guar gum (PHGG)</em> and <em>resistant starch</em>. A kefir + those two + berries is already a legitimate version of this drink.
+</div>
+
+<h2><span class="num">05</span> How to Ramp Up</h2>
+<p>The trial participants were screened and monitored. If you dump 15 g of mixed fiber into an untrained gut on day one, you will feel awful and blame the wrong thing. Gas, bloating and cramps at the start don't mean it's broken — they mean your microbiome is adapting. Go slowly.</p>
+
+<div class="ramp">
+  <h4>A realistic 4-week ramp</h4>
+  <div class="ramp-track">
+    <div class="ramp-step">
+      <div class="w">Week 1</div>
+      <b>Starter</b>
+      <span>50–100 ml kefir + 1 fiber (PHGG). Once a day.</span>
+    </div>
+    <div class="ramp-step">
+      <div class="w">Week 2</div>
+      <b>Add a fiber</b>
+      <span>Kefir to 150 ml. Add resistant starch. Add berries.</span>
+    </div>
+    <div class="ramp-step">
+      <div class="w">Week 3</div>
+      <b>Add inulin</b>
+      <span>Bring inulin in at ¼ tsp, work up to ½ tsp.</span>
+    </div>
+    <div class="ramp-step">
+      <div class="w">Week 4</div>
+      <b>Full spectrum</b>
+      <span>All four fibers + flax + berries + full kefir pour.</span>
+    </div>
+  </div>
+</div>
+
+<h2><span class="num">06</span> Ground Rules</h2>
+
+<table>
+  <tr><th>Rule</th><th>Why it matters</th></tr>
+  <tr><td><strong>Daily, not sporadic</strong></td><td>The trial was 6 weeks of daily intake. Microbial shifts take consistency — a few shakes a month won't move the needle.</td></tr>
+  <tr><td><strong>Start low, build slow</strong></td><td>Gas and bloating in week one usually means you jumped the ramp. Back off by one ingredient for 3–4 days and try again.</td></tr>
+  <tr><td><strong>Keep the kefir cold</strong></td><td>Heat kills live cultures. Blend with cold ingredients and ice, never warm liquid.</td></tr>
+  <tr><td><strong>Don't expect caffeine-speed</strong></td><td>The benefits are subtle and cumulative: better digestion, more stable energy, less background inflammation over weeks.</td></tr>
+  <tr><td><strong>Unsweetened kefir only</strong></td><td>Flavored kefirs are often loaded with sugar — defeats the point. Add sweetness from berries if needed.</td></tr>
+  <tr><td><strong>Combine with omega-3 if you want</strong></td><td>Top-down + bottom-up is the strongest approach for most people. They're not rivals.</td></tr>
+</table>
+
+<div class="callout warn">
+  <strong>A note on the study</strong>
+  The fiber blend in the trial was supplied by Chuckling Goat Limited, who also funded the study — so the results are not unbiased. The mechanisms (fiber diversity → butyrate → lower IL-6) are well-established in the wider literature, which is why a home replica with generic fibers is reasonable. But treat the "won by a lot" framing with a grain of salt.
+</div>
+
+<h2><span class="num">07</span> The Takeaway</h2>
+<p>The real lesson of the study isn't that kefir is magic or that fiber blends are magic. It's that <strong>inflammation is usually driven by systems, not single nutrients</strong>. When you support the system that regulates your immune signaling, gut barrier, and metabolism — feed it diverse fiber, populate it with diverse microbes — the body does an enormous amount of work for you. Feeding your gut ecosystem can sometimes do more for chronic inflammation than trying to suppress it from above.</p>
+
+<div class="pull">"Inflammation is often driven by systems, not single nutrients. Feed the system, and the body makes its own anti-inflammatory signals."</div>
+
+<footer>
+  Educational summary of a discussed study and recipe walkthrough — not medical advice. If you have a diagnosed GI condition, are immunocompromised, or are pregnant, talk to your clinician before starting a live-culture, high-fiber protocol.
+</footer>
+
+</div>
+</body>
+</html>

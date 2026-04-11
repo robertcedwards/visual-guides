@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIY Running Nutrition — A Visual Guide to Homemade Energy Bites & Gels</title>
+<style>
+  :root{
+    --bg:#f4f1e8;
+    --ink:#1c221a;
+    --muted:#5a6355;
+    --accent:#b8541f;
+    --accent-soft:#e8b894;
+    --accent-deep:#7a3612;
+    --berry:#7a2e4a;
+    --cream:#fffbf1;
+    --card:#fffdf5;
+    --line:#d6d1bf;
+    --good:#3a6b35;
+    --bad:#a8341f;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(28,34,26,.07);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Iowan Old Style',serif;line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:48px 28px 96px}
+  header.hero{
+    text-align:center;
+    padding:56px 24px 48px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:48px;
+    background:
+      radial-gradient(ellipse at top, rgba(184,84,31,.10), transparent 60%),
+      var(--bg);
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-size:12px;
+    color:var(--accent);
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-weight:700;
+    margin-bottom:14px;
+  }
+  h1{
+    font-size:54px;
+    line-height:1.05;
+    margin:0 0 18px;
+    letter-spacing:-.02em;
+  }
+  .sub{
+    font-size:19px;
+    color:var(--muted);
+    max-width:660px;
+    margin:0 auto;
+    font-style:italic;
+  }
+  h2{
+    font-size:32px;
+    margin:64px 0 8px;
+    letter-spacing:-.01em;
+    border-top:2px solid var(--ink);
+    padding-top:28px;
+  }
+  h2 .num{
+    display:inline-block;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:13px;
+    color:var(--accent);
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    vertical-align:middle;
+    margin-right:14px;
+    padding:4px 10px;
+    border:1px solid var(--accent);
+    border-radius:999px;
+  }
+  h3{font-size:21px;margin:32px 0 8px;color:var(--ink)}
+  p{margin:10px 0 16px}
+  .lede{font-size:18px;color:var(--muted);max-width:720px}
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+    margin:24px 0;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:20px 22px;
+    box-shadow:var(--shadow);
+  }
+  .card h4{
+    margin:0 0 8px;
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+  }
+  .card p{margin:6px 0;font-size:15px;color:var(--muted)}
+  .card .stat{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:32px;
+    color:var(--accent);
+    font-weight:700;
+    display:block;
+    margin:6px 0 2px;
+    letter-spacing:-.01em;
+  }
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:24px 0;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    font-size:15px;
+  }
+  th, td{
+    padding:14px 16px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  th{
+    background:#eae6d2;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    text-transform:uppercase;
+    font-size:12px;
+    letter-spacing:.08em;
+  }
+  tr:last-child td{border-bottom:none}
+
+  .callout{
+    margin:24px 0;
+    padding:18px 22px;
+    border-left:4px solid var(--accent);
+    background:#f7ece2;
+    border-radius:0 8px 8px 0;
+  }
+  .callout.warn{
+    border-left-color:var(--bad);
+    background:#fbe7e2;
+  }
+  .callout.good{
+    border-left-color:var(--good);
+    background:#e4efda;
+  }
+  .callout strong{font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:13px;display:block;margin-bottom:6px}
+
+  .vs{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin:24px 0;
+  }
+  .vs > div{
+    padding:22px 24px;
+    border-radius:10px;
+    border:1px solid var(--line);
+    background:var(--card);
+    box-shadow:var(--shadow);
+  }
+  .vs .a-side{border-top:4px solid #c9a24a}
+  .vs .b-side{border-top:4px solid var(--accent)}
+  .vs h4{
+    margin:0 0 6px;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    text-transform:uppercase;
+    font-size:13px;
+    letter-spacing:.08em;
+  }
+  .vs .tag{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+  .vs ul{margin:10px 0 0 0;padding-left:18px;color:var(--muted);font-size:15px}
+  .vs li{margin:6px 0}
+
+  /* Cost comparison bars */
+  .bars{margin:24px 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;box-shadow:var(--shadow)}
+  .bars h4{margin:0 0 18px;font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.08em}
+  .bar-row{display:grid;grid-template-columns:170px 1fr 80px;gap:12px;align-items:center;margin:10px 0;font-size:14px}
+  .bar-row .label{color:var(--muted);font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;font-size:12px;letter-spacing:.06em}
+  .bar-row .track{background:#ece8d4;height:18px;border-radius:99px;overflow:hidden}
+  .bar-row .fill{height:100%;border-radius:99px}
+  .bar-row .val{font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--accent-deep);text-align:right}
+  .fill.spring{background:#c9a24a;width:100%}
+  .fill.maurten{background:#b8894a;width:100%}
+  .fill.mure{background:#a89060;width:82%}
+  .fill.bite{background:var(--accent);width:11%}
+  .fill.homegel{background:var(--accent);width:14%}
+
+  /* Recipe cards */
+  .recipe{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:28px 30px;
+    margin:28px 0;
+    box-shadow:var(--shadow);
+    position:relative;
+  }
+  .recipe .rtag{
+    display:inline-block;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:11px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--cream);
+    background:var(--accent);
+    padding:4px 12px;
+    border-radius:99px;
+    margin-bottom:10px;
+  }
+  .recipe.bites .rtag{background:var(--accent-deep)}
+  .recipe.gels .rtag{background:var(--berry)}
+  .recipe h3{margin:0 0 4px;font-size:24px}
+  .recipe .desc{color:var(--muted);font-size:15px;font-style:italic;margin:0 0 18px}
+  .recipe .ingredients{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:10px;
+    margin:18px 0;
+  }
+  .recipe .ing{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    padding:10px 12px;
+    background:#f9f5e6;
+    border-radius:8px;
+    font-size:14px;
+  }
+  .recipe .ing .dot{
+    width:10px;height:10px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px;
+  }
+  .recipe .ing b{display:block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+  .recipe .ing span{color:var(--muted);font-size:13px}
+  .recipe .method{
+    margin-top:14px;
+    padding-top:16px;
+    border-top:1px dashed var(--line);
+    font-size:14px;
+    color:var(--muted);
+  }
+  .recipe .method b{color:var(--ink);font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;font-size:12px;letter-spacing:.08em;display:block;margin-bottom:6px}
+  .recipe .macros{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+    gap:10px;
+    margin-top:16px;
+  }
+  .recipe .macro{
+    text-align:center;
+    padding:12px 8px;
+    background:#f1ecd9;
+    border-radius:8px;
+  }
+  .recipe .macro b{display:block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:20px;color:var(--accent-deep)}
+  .recipe .macro span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+  /* Ingredient map */
+  .fiber-map{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:14px;
+    margin:24px 0;
+  }
+  .fiber-map .fm{
+    padding:16px 18px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    text-align:center;
+    box-shadow:var(--shadow);
+  }
+  .fiber-map .fm .icon{
+    font-size:28px;
+    display:block;
+    margin-bottom:6px;
+  }
+  .fiber-map .fm b{
+    display:block;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    margin-bottom:4px;
+  }
+  .fiber-map .fm span{font-size:13px;color:var(--muted)}
+
+  /* Zone chart */
+  .ramp{
+    margin:24px 0;
+    padding:24px 28px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    box-shadow:var(--shadow);
+  }
+  .ramp h4{margin:0 0 16px;font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.08em}
+  .ramp-track{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+  .ramp-step{
+    padding:14px;
+    background:#f1ecd9;
+    border-radius:8px;
+    text-align:center;
+    position:relative;
+  }
+  .ramp-step .w{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase}
+  .ramp-step b{display:block;font-size:15px;margin:4px 0}
+  .ramp-step span{font-size:12px;color:var(--muted)}
+  .ramp-step:nth-child(2){background:#f3e0cc}
+  .ramp-step:nth-child(3){background:#eecba8}
+
+  footer{
+    margin-top:80px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+    text-align:center;
+    font-size:14px;
+    color:var(--muted);
+    font-style:italic;
+  }
+
+  .pull{
+    font-family:Georgia,serif;
+    font-size:24px;
+    line-height:1.4;
+    color:var(--ink);
+    font-style:italic;
+    margin:32px auto;
+    padding:16px 28px;
+    border-left:3px solid var(--accent);
+    max-width:780px;
+  }
+
+  @media (max-width:640px){
+    h1{font-size:38px}
+    h2{font-size:25px}
+    .vs{grid-template-columns:1fr}
+    .ramp-track{grid-template-columns:1fr}
+    .bar-row{grid-template-columns:110px 1fr 60px}
+    .wrap{padding:24px 18px 64px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">A Practical Guide</div>
+  <h1>DIY Running Nutrition</h1>
+  <p class="sub">One week of store-bought gels costs $50. The same carbs, made at home, cost $9 — and taste better. Here's exactly how.</p>
+</header>
+
+<p class="lede">If you're triathlon training, ultra running, or deep in a marathon block pulling 10–17 hours of cardio a week, you need a <em>lot</em> of carbs to keep the body ticking. Buying gels works, but it's expensive and you have no control over what's in them. This guide walks through two home-made recipes — a pocketable energy bite for easy days and a squeeze-pouch gel for speed work — both cheaper than store-bought by nearly an order of magnitude.</p>
+
+<div class="pull">"You can reduce your running nutrition cost from $200 a month down to about $20 a month. One-tenth the cost."</div>
+
+<h2><span class="num">01</span> The Cost Story</h2>
+<p>The whole reason this matters. Per-unit cost, compared honestly against the gels you'd actually find at a running store today.</p>
+
+<div class="grid">
+  <div class="card">
+    <h4>Store-bought week</h4>
+    <span class="stat">$50</span>
+    <p>One week of running gels at normal training volume.</p>
+  </div>
+  <div class="card">
+    <h4>Homemade, same carbs</h4>
+    <span class="stat">$9</span>
+    <p>Same carb load, made at home from bulk ingredients.</p>
+  </div>
+  <div class="card">
+    <h4>Marathon block</h4>
+    <span class="stat">$200→$20</span>
+    <p>Monthly nutrition spend can drop to one-tenth.</p>
+  </div>
+  <div class="card">
+    <h4>Per-gel equivalent</h4>
+    <span class="stat">~10×</span>
+    <p>Seven to ten times cheaper than buying the name brands.</p>
+  </div>
+</div>
+
+<div class="bars">
+  <h4>Cost per gel-equivalent</h4>
+  <div class="bar-row"><div class="label">Spring Energy</div><div class="track"><div class="fill spring"></div></div><div class="val">$4.00</div></div>
+  <div class="bar-row"><div class="label">Maurten</div><div class="track"><div class="fill maurten"></div></div><div class="val">$4.00</div></div>
+  <div class="bar-row"><div class="label">Muir Energy</div><div class="track"><div class="fill mure"></div></div><div class="val">$3.30</div></div>
+  <div class="bar-row"><div class="label">DIY energy bites (×2)</div><div class="track"><div class="fill bite"></div></div><div class="val">$0.43</div></div>
+  <div class="bar-row"><div class="label">DIY gel pouch (half)</div><div class="track"><div class="fill homegel"></div></div><div class="val">$0.57</div></div>
+  <p style="font-size:13px;color:var(--muted);margin-top:14px;font-style:italic">Each row shows the cost of one gel's worth of carbs (~25 g). Two homemade energy bites equal one gel; half a 5 oz homemade pouch equals one gel.</p>
+</div>
+
+<h2><span class="num">02</span> Buy vs. Make</h2>
+<p>There are real tradeoffs. Making your own isn't strictly better — it just wins hard on cost and control.</p>
+
+<div class="vs">
+  <div class="a-side">
+    <div class="tag">Store-bought</div>
+    <h4>Pre-packaged Gels</h4>
+    <p style="font-size:14px;color:var(--muted);margin:6px 0 0">Convenient and consistent, but pricey and opaque.</p>
+    <ul>
+      <li>Grab it anywhere in the world</li>
+      <li>A gut-tested brand travels with you</li>
+      <li>Long shelf life, no prep</li>
+      <li>Expensive — $3–$4 per gel</li>
+      <li>No control over the ingredient list</li>
+      <li>Packet waste every workout</li>
+    </ul>
+  </div>
+  <div class="b-side">
+    <div class="tag">Homemade</div>
+    <h4>DIY Energy Fuel</h4>
+    <p style="font-size:14px;color:var(--muted);margin:6px 0 0">Cheaper, customizable, reusable — with a few real drawbacks.</p>
+    <ul>
+      <li>7–10× cheaper per gel-equivalent</li>
+      <li>Full control over ingredients</li>
+      <li>Reusable pouches, less trash</li>
+      <li>Honestly kind of fun</li>
+      <li>Takes prep time</li>
+      <li>Shorter shelf life — fridge/freezer only</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout">
+  <strong>Who this is for</strong>
+  Endurance athletes in heavy training blocks — marathon, ultra, or triathlon — who are burning through gels fast enough that the cost actually hurts. If you race twice a year and use three gels total, the math doesn't matter. If you're eating 6+ gels on every long run, it matters a lot.
+</div>
+
+<h2><span class="num">03</span> The Core Ingredients</h2>
+<p>Both recipes share the same backbone: dates and applesauce as the carb base. Everything else is there to adjust texture, flavor, or use case.</p>
+
+<div class="fiber-map">
+  <div class="fm"><span class="icon">🌴</span><b>Medjool Dates</b><span>The foundation — packed with fast carbs</span></div>
+  <div class="fm"><span class="icon">🍎</span><b>Applesauce</b><span>Adds moisture, sweetness, easy carbs</span></div>
+  <div class="fm"><span class="icon">🥜</span><b>PB Powder</b><span>Fat-stripped peanut; flavor + texture</span></div>
+  <div class="fm"><span class="icon">🌾</span><b>Rolled Oats</b><span>Blended into oat powder; thickens bites</span></div>
+  <div class="fm"><span class="icon">🍫</span><b>Mini Choc Chips</b><span>Optional — texture and joy</span></div>
+  <div class="fm"><span class="icon">🧂</span><b>Coarse Salt</b><span>Cuts sweetness, replaces electrolytes</span></div>
+  <div class="fm"><span class="icon">🫐</span><b>Mixed Berries</b><span>Flavor base for the gel pouch version</span></div>
+  <div class="fm"><span class="icon">🥥</span><b>Coconut Sugar</b><span>Optional carb + sweetness boost in gels</span></div>
+</div>
+
+<div class="callout good">
+  <strong>Why peanut butter <em>powder</em>, not peanut butter</strong>
+  Regular peanut butter is half fat, and fat is slow to digest — not what you want mid-run. PB powder has the fat extracted, leaving ~8 g protein and ~6 g carbs per serving. It adds the taste and creamy consistency without slowing you down.
+</div>
+
+<h2><span class="num">04</span> The Recipes</h2>
+<p>Two versions for two use cases. <strong>Energy bites</strong> are solid and chewy — best for easier efforts where you can take a second to chew. <strong>Gel pouches</strong> are fluid and go down fast — built for speed workouts and long efforts where you don't want to slow your cadence.</p>
+
+<div class="recipe bites">
+  <span class="rtag">Recipe 1 · Energy Bites</span>
+  <h3>Date &amp; Applesauce Carb Bites</h3>
+  <p class="desc">For zone 1–3 training and long easy runs. Chewy, pocketable, and kid-approved.</p>
+  <div class="ingredients">
+    <div class="ing"><div class="dot"></div><div><b>Rolled Oats</b><span>1½ cups, blended into oat powder</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>PB Powder</b><span>½ cup</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Applesauce</b><span>2 cups</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Medjool Dates</b><span>1 full bag, pitted</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Mini Chocolate Chips</b><span>½ cup (optional)</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Coarse Salt</b><span>A good pinch — balances the sweetness</span></div></div>
+  </div>
+  <div class="method">
+    <b>Method</b>
+    Blend the oats into a fine powder, then combine in a bowl with the PB powder. Separately blend the applesauce and dates until smooth — no big chunks. Fold the wet mixture into the dry, then stir in chocolate chips and salt. Spoon small portions onto wax paper, twist the paper like a Tootsie Roll wrapper, and freeze. Pull out what you need the night before a run.
+  </div>
+  <div class="macros">
+    <div class="macro"><b>35</b><span>Bites per batch</span></div>
+    <div class="macro"><b>12.5 g</b><span>Carbs per bite</span></div>
+    <div class="macro"><b>25 g</b><span>Carbs per 2 bites (= 1 gel)</span></div>
+    <div class="macro"><b>$7.58</b><span>Total batch cost</span></div>
+    <div class="macro"><b>$0.43</b><span>Per gel equivalent</span></div>
+  </div>
+</div>
+
+<div class="recipe gels">
+  <span class="rtag">Recipe 2 · Gel Pouches</span>
+  <h3>Berry Squeeze Gels</h3>
+  <p class="desc">For speed workouts, marathon pace efforts, and long runs where you want fast-absorbing fuel and can't slow down to chew.</p>
+  <div class="ingredients">
+    <div class="ing"><div class="dot"></div><div><b>Medjool Dates</b><span>150 g (weigh for accuracy)</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Applesauce</b><span>1 cup</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Frozen Mixed Berries</b><span>2 cups (or any fruit you like)</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Coconut Sugar</b><span>¼ cup (optional — adds carbs + sweetness)</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Water</b><span>A splash, to help it blend smooth</span></div></div>
+    <div class="ing"><div class="dot"></div><div><b>Reusable Pouches</b><span>5 oz, with screw top &amp; zip seal</span></div></div>
+  </div>
+  <div class="method">
+    <b>Method</b>
+    Blend everything until completely smooth — no chunks, or they'll clog the pouch nozzle. Err on the thinner side; thick gels are miserable at race pace. Transfer to a pitcher with a pour spout, then fill each pouch about 3/4 full (it'll spread when you pinch it closed). Seal, label, and freeze. Pull one into the fridge the day before you need it.
+  </div>
+  <div class="macros">
+    <div class="macro"><b>5</b><span>5 oz pouches per batch</span></div>
+    <div class="macro"><b>~40.5 g</b><span>Carbs per pouch</span></div>
+    <div class="macro"><b>10</b><span>Gel-equivalents per batch</span></div>
+    <div class="macro"><b>$5.73</b><span>Total batch cost</span></div>
+    <div class="macro"><b>$0.57</b><span>Per gel equivalent</span></div>
+  </div>
+</div>
+
+<div class="callout">
+  <strong>Pouches are basically two gels in one</strong>
+  A 5 oz pouch holds ~40 g of carbs — way more than the ~25 g in a standard gel. Treat each pouch as two servings: take half, run another 25 minutes, take the other half. On an 18-mile hilly long run, three pouches = six gels worth of fuel across the whole effort. Pouches also come in 3 oz and 7 oz if you want to target different dose sizes.
+</div>
+
+<h2><span class="num">05</span> When to Use Which</h2>
+<p>Both recipes work; they're just tuned for different efforts. The bites are built around texture and slower eating; the gels are built for speed.</p>
+
+<div class="ramp">
+  <h4>Which fuel for which session</h4>
+  <div class="ramp-track">
+    <div class="ramp-step">
+      <div class="w">Zone 1–3</div>
+      <b>Energy Bites</b>
+      <span>Easy long runs, base miles, anything under half-marathon distance. 3 bites covers ~10–13 miles.</span>
+    </div>
+    <div class="ramp-step">
+      <div class="w">Zone 3–4</div>
+      <b>Either</b>
+      <span>Marathon-pace long runs — pick whichever sits better in your stomach that day.</span>
+    </div>
+    <div class="ramp-step">
+      <div class="w">Zone 4–5</div>
+      <b>Gel Pouches</b>
+      <span>Speed workouts, half-marathon pace, long hill efforts. Fluid fuel absorbs faster at high intensity.</span>
+    </div>
+  </div>
+</div>
+
+<h2><span class="num">06</span> Storage &amp; Ground Rules</h2>
+
+<table>
+  <tr><th>Rule</th><th>Why it matters</th></tr>
+  <tr><td><strong>Freeze the batch, fridge what's next</strong></td><td>No preservatives means a ~1 week fridge life. Freeze everything, then transfer 2–3 days worth to the fridge as you go.</td></tr>
+  <tr><td><strong>Blend gels smooth — no chunks</strong></td><td>Pouch nozzles are small. Even a small chunk of fruit can clog one mid-run. Over-blend rather than under-blend.</td></tr>
+  <tr><td><strong>Go thinner on gels, not thicker</strong></td><td>Thick gels are brutal to swallow at speed-workout pace. A touch of water is worth it.</td></tr>
+  <tr><td><strong>Don't overfill pouches</strong></td><td>Fill to ~3/4. Pinching the seal pushes the level up — more than that and you'll overflow the zip.</td></tr>
+  <tr><td><strong>Chase bites with water</strong></td><td>Bites are denser than gels. A few sips of water after each one helps them digest quickly.</td></tr>
+  <tr><td><strong>Add the salt</strong></td><td>The wife was right: a pinch of coarse salt balances the sweetness of dates + applesauce and doubles as electrolytes. Don't skip it.</td></tr>
+  <tr><td><strong>Max two pouches in one pocket</strong></td><td>More than two 5 oz pouches in a shorts pocket and you'll feel every step. Spread them across belt + pack + shorts.</td></tr>
+</table>
+
+<div class="callout warn">
+  <strong>Shelf life &amp; travel</strong>
+  This is the real downside. Store-bought gels live in a drawer for a year and fit in carry-on luggage without a thought. Homemade fuel needs a fridge or freezer and doesn't travel well. Most endurance athletes end up doing both — DIY for training at home, store-bought for travel and race day.
+</div>
+
+<h2><span class="num">07</span> The Takeaway</h2>
+<p>The real lesson isn't that homemade gels taste better or that dates are magic — it's that <strong>gel-shaped carbs are wildly overpriced</strong>. Once you see that two ingredients (dates and applesauce) hit the same macros as a $4 gel for about 50 cents, the math on a marathon block changes completely. Make a batch of each on a Sunday, freeze them, and a whole week of long-run fuel takes 30 minutes of prep and costs less than a single Spring Energy.</p>
+
+<div class="pull">"This is even better than I originally thought — same carbs, same feeling on the run, one-tenth the cost."</div>
+
+<footer>
+  Visual summary of a DIY endurance nutrition recipe video — not a medical or sports nutrition prescription. Dial in your own gut tolerance on training runs, not race day.
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cotton Audit — A Visual Guide to Quality Cotton Garments</title>
+<style>
+  :root{
+    --bg:#f7f3ec;
+    --ink:#1e1a17;
+    --muted:#5b524a;
+    --accent:#b8541d;
+    --accent-soft:#e9b489;
+    --good:#3a6b35;
+    --bad:#a8341f;
+    --card:#fffaf2;
+    --line:#d8cfc1;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(30,26,23,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Iowan Old Style',serif;line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:48px 28px 96px}
+  header.hero{
+    text-align:center;
+    padding:56px 24px 48px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:48px;
+    background:
+      radial-gradient(ellipse at top, rgba(184,84,29,.08), transparent 60%),
+      var(--bg);
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-size:12px;
+    color:var(--accent);
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-weight:700;
+    margin-bottom:14px;
+  }
+  h1{
+    font-size:54px;
+    line-height:1.05;
+    margin:0 0 18px;
+    letter-spacing:-.02em;
+  }
+  .sub{
+    font-size:19px;
+    color:var(--muted);
+    max-width:640px;
+    margin:0 auto;
+    font-style:italic;
+  }
+  h2{
+    font-size:32px;
+    margin:64px 0 8px;
+    letter-spacing:-.01em;
+    border-top:2px solid var(--ink);
+    padding-top:28px;
+  }
+  h2 .num{
+    display:inline-block;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:13px;
+    color:var(--accent);
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    vertical-align:middle;
+    margin-right:14px;
+    padding:4px 10px;
+    border:1px solid var(--accent);
+    border-radius:999px;
+  }
+  h3{font-size:21px;margin:32px 0 8px;color:var(--ink)}
+  p{margin:10px 0 16px}
+  .lede{font-size:18px;color:var(--muted);max-width:720px}
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+    margin:24px 0;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:20px 22px;
+    box-shadow:var(--shadow);
+  }
+  .card h4{
+    margin:0 0 8px;
+    font-size:16px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+  }
+  .card p{margin:6px 0;font-size:15px;color:var(--muted)}
+  .card .stat{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:28px;
+    color:var(--accent);
+    font-weight:700;
+    display:block;
+    margin:6px 0 2px;
+  }
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:24px 0;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    font-size:15px;
+  }
+  th, td{
+    padding:14px 16px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  th{
+    background:#efe6d6;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    text-transform:uppercase;
+    font-size:12px;
+    letter-spacing:.08em;
+  }
+  tr:last-child td{border-bottom:none}
+
+  .callout{
+    margin:24px 0;
+    padding:18px 22px;
+    border-left:4px solid var(--accent);
+    background:#fdf1e2;
+    border-radius:0 8px 8px 0;
+  }
+  .callout.warn{
+    border-left-color:var(--bad);
+    background:#fbe7e2;
+  }
+  .callout.good{
+    border-left-color:var(--good);
+    background:#e8f0e3;
+  }
+  .callout strong{font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:13px;display:block;margin-bottom:6px}
+
+  .vs{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin:24px 0;
+  }
+  .vs > div{
+    padding:20px 22px;
+    border-radius:10px;
+    border:1px solid var(--line);
+    background:var(--card);
+  }
+  .vs .green-side{border-top:4px solid var(--good)}
+  .vs .red-side{border-top:4px solid var(--bad)}
+  .vs h4{
+    margin:0 0 10px;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    text-transform:uppercase;
+    font-size:13px;
+    letter-spacing:.08em;
+  }
+  .vs ul{margin:8px 0 0 0;padding-left:18px;color:var(--muted);font-size:15px}
+  .vs li{margin:6px 0}
+
+  ul.checklist{
+    list-style:none;
+    padding:0;
+    margin:18px 0;
+  }
+  ul.checklist li{
+    padding:12px 16px 12px 44px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:8px;
+    margin-bottom:8px;
+    position:relative;
+    font-size:15px;
+  }
+  ul.checklist li::before{
+    content:"✓";
+    position:absolute;
+    left:14px;
+    top:11px;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:var(--accent);
+    color:#fff;
+    text-align:center;
+    line-height:22px;
+    font-family:Arial;
+    font-weight:bold;
+    font-size:13px;
+  }
+
+  .scale{
+    margin:24px 0;
+    padding:24px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+  }
+  .scale .bar{
+    height:14px;
+    border-radius:99px;
+    background:linear-gradient(to right,#c97a3d,#e9b489 35%,#9bbf8c 70%,#3a6b35);
+    margin:14px 0 8px;
+    position:relative;
+  }
+  .scale .ticks{
+    display:flex;
+    justify-content:space-between;
+    font-size:12px;
+    color:var(--muted);
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+  }
+  .scale h4{
+    margin:0 0 4px;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    text-transform:uppercase;
+    font-size:13px;
+    letter-spacing:.06em;
+  }
+
+  footer{
+    margin-top:80px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+    text-align:center;
+    font-size:14px;
+    color:var(--muted);
+    font-style:italic;
+  }
+
+  .pull{
+    font-family:Georgia,serif;
+    font-size:24px;
+    line-height:1.4;
+    color:var(--ink);
+    font-style:italic;
+    margin:32px auto;
+    padding:16px 28px;
+    border-left:3px solid var(--accent);
+    max-width:780px;
+  }
+
+  @media (max-width:640px){
+    h1{font-size:38px}
+    h2{font-size:25px}
+    .vs{grid-template-columns:1fr}
+    .wrap{padding:24px 18px 64px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">A Field Guide</div>
+  <h1>The Cotton Audit</h1>
+  <p class="sub">How to read a cotton garment from the molecular level up — and never get fooled by a "premium basic" again.</p>
+</header>
+
+<p class="lede">Most people glance at a tag, see <em>100% cotton</em>, and call it a day. But "100% cotton" tells you the plant — not the grade, not the spin, not the knit, not the construction. This guide walks you through the eight things that actually determine whether a cotton garment will live in your closet for years, or twist into a sad rag after one wash.</p>
+
+<div class="pull">"Once you learn how to audit the architecture of a garment, you'll stop seeing premium basics — and start seeing the reality of what you're holding."</div>
+
+<!-- ============ 1 FIBER ============ -->
+<h2><span class="num">01</span>The Fiber</h2>
+<p>The cotton fiber is the DNA of the garment. Three measurements decide its grade:</p>
+
+<div class="grid">
+  <div class="card">
+    <h4>Staple Length</h4>
+    <span class="stat">How long</span>
+    <p>Longer fibers = fewer hairy ends, smoother & more durable yarn.</p>
+  </div>
+  <div class="card">
+    <h4>Micronaire</h4>
+    <span class="stat">3.7 – 4.2</span>
+    <p>Fineness and maturity. The sweet spot for standard cotton.</p>
+  </div>
+  <div class="card">
+    <h4>Strength (g/tex)</h4>
+    <span class="stat">27 → 40+</span>
+    <p>Upland averages ~27 g/tex. True ELS cotton hits 40+ — almost 50% stronger.</p>
+  </div>
+</div>
+
+<h3>The four cottons you'll meet</h3>
+<table>
+  <thead>
+    <tr><th>Type</th><th>Share of supply</th><th>Quality</th><th>Notes</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Upland</strong></td><td>~90% of world supply</td><td>Low</td><td>Short fibers. Cheap, easy to grow, the industrial default.</td></tr>
+    <tr><td><strong>Pima / Supima</strong></td><td>Premium</td><td>High</td><td>The gold standard. Best performance-to-value ratio.</td></tr>
+    <tr><td><strong>Giza / Sea Island</strong></td><td>Rare</td><td>Highest</td><td>Specialty fibers. Diminishing returns past Pima.</td></tr>
+    <tr><td><strong>CVC (Chief Value Cotton)</strong></td><td>Common</td><td>Worst</td><td>~60% cotton / 40% polyester. Made from the worst upland. Traps heat, pills.</td></tr>
+  </tbody>
+</table>
+
+<div class="callout warn">
+  <strong>Watch out: "Egyptian cotton"</strong>
+  If the label doesn't explicitly say <em>Giza</em>, it's probably just cheap upland cotton grown in Egypt. If the price seems too good to be true, the fiber probably is too.
+</div>
+
+<!-- ============ 2 YARN ============ -->
+<h2><span class="num">02</span>The Yarn</h2>
+<p>Once cotton is picked, it must be cleaned and twisted into yarn. This step quietly decides whether your shirt feels smooth or scratchy a year from now.</p>
+
+<div class="vs">
+  <div class="red-side">
+    <h4>Carded only (standard)</h4>
+    <ul>
+      <li>Mechanical cleaning, fibers loosely aligned.</li>
+      <li>Leaves in short, weak fibers.</li>
+      <li>Feels okay in store thanks to chemical softeners.</li>
+      <li>Becomes fuzzy and scratchy fast.</li>
+    </ul>
+  </div>
+  <div class="green-side">
+    <h4>Combed (premium)</h4>
+    <ul>
+      <li>Mechanical bristles strip out the short, weak fibers.</li>
+      <li>Removes ~15% of the cotton (recycled into Q-tips, cotton balls).</li>
+      <li>Stronger, more uniform, finer yarn.</li>
+      <li>Costs more — for good reason.</li>
+    </ul>
+  </div>
+</div>
+
+<h3>Yarn count — the "fineness scale"</h3>
+<div class="scale">
+  <h4>Singles count (higher = finer)</h4>
+  <div class="bar"></div>
+  <div class="ticks"><span>10–20 (coarse)</span><span>30–40 (quality T-shirt)</span><span>60+ (luxury dress shirt)</span></div>
+</div>
+
+<h3>Spinning methods</h3>
+<table>
+  <thead><tr><th>Method</th><th>What it is</th><th>Verdict</th></tr></thead>
+  <tbody>
+    <tr><td>Open-end</td><td>Fast industrial spinning</td><td>Rough, stiff. The cheap default.</td></tr>
+    <tr><td>Ring spun</td><td>Oldest method, still the standard</td><td>Soft, balanced, durable.</td></tr>
+    <tr><td>Compact ring spun</td><td>Vacuum pulls in stray fibers</td><td>Almost hairless, cool to the touch. Best.</td></tr>
+    <tr><td>Vortex / MVS</td><td>Air jets wrap fibers tightly</td><td>Pill-resistant but stiffer, less plush.</td></tr>
+  </tbody>
+</table>
+
+<h3>Single ply vs. two ply</h3>
+<p>Most T-shirts are <strong>single ply</strong> — one twisted strand. Twisted yarn is unbalanced; it wants to untwist itself. That's why a cheap tee starts <em>spiraling around your stomach</em> after one wash. <strong>Two-ply</strong> yarns counteract that twist, so the shirt stays square.</p>
+
+<div class="callout warn">
+  <strong>The "ring spun" trap</strong>
+  Brands know consumers Google "ring spun cotton." Some run garbage cotton through the ring spinning machine just to print the words on a tag. If it says ring spun but feels rough, scratchy, and thick — it's a marketing checkbox, nothing more.
+</div>
+
+<!-- ============ 3 KNIT ============ -->
+<h2><span class="num">03</span>The Knit</h2>
+<p>If yarn is the thread, the knit is the architecture. A knit is a series of interlocking loops — and how tightly those loops sit together decides whether your shirt holds its shape or pills into oblivion.</p>
+
+<div class="vs">
+  <div class="red-side">
+    <h4>Single jersey (~99% of tees)</h4>
+    <ul>
+      <li>Smooth face, looped back.</li>
+      <li>Lightweight, naturally stretchy.</li>
+      <li>Curls at the edges.</li>
+    </ul>
+  </div>
+  <div class="green-side">
+    <h4>Interlock knit (top tier)</h4>
+    <ul>
+      <li>Two layers knit into one — identical on both sides.</li>
+      <li>Substantial and bouncy, not thin and limp.</li>
+      <li>Doesn't curl. Doesn't stretch out.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout warn">
+  <strong>The loose-knit shortcut</strong>
+  Brands save money by stretching loops further apart — same fabric area, less yarn. Loose loops let fibers migrate, rub, and form pills. A tight knit locks the fibers down. It costs more because it uses more raw material.
+</div>
+
+<h3>The GSM myth</h3>
+<p>GSM = grams per square meter. Brands love to sell heavyweight as "luxury." It isn't. You can hit 200 GSM with a thick, open-end yarn knit loosely <em>or</em> with a fine yarn knit tightly. The number tells you weight — not quality.</p>
+
+<!-- ============ 4 DYE ============ -->
+<h2><span class="num">04</span>The Dye</h2>
+<table>
+  <thead><tr><th>Dye type</th><th>How it sits</th><th>How it ages</th></tr></thead>
+  <tbody>
+    <tr><td>Pigment dye</td><td>On the surface</td><td>Faded "vintage" look — washes off.</td></tr>
+    <tr><td>Sulfur dye</td><td>On the surface</td><td>Cheap, deep blacks at first — fades sadly over time.</td></tr>
+    <tr><td><strong>Reactive dye</strong></td><td>Bonds to the fiber's molecular structure</td><td>The gold standard. Ages with you.</td></tr>
+  </tbody>
+</table>
+
+<!-- ============ 5 SHRINKAGE ============ -->
+<h2><span class="num">05</span>Shrinkage &amp; Finishing</h2>
+<p>Cotton fibers have natural kinks and bends. The whole spinning and knitting process pulls them straight. The instant water hits them, they want to relax — and that's shrinkage. Skipping pre-shrinking means more shirts per yard of fabric, which means more profit. Shirts can shrink up to 10% on the first wash if untreated.</p>
+
+<div class="grid">
+  <div class="card">
+    <h4>Steam pre-shrink</h4>
+    <p>Hits the fibers with steam to relax them <em>before</em> you take the shirt home.</p>
+  </div>
+  <div class="card">
+    <h4>Sanforization / compacting</h4>
+    <p>Forces the knit to a tighter resting state, limiting first-wash shrink.</p>
+  </div>
+  <div class="card">
+    <h4>Mercerization / liquid ammonia</h4>
+    <p>Reshapes the fiber from bean-shaped to round. Smoother, softer, deeper colors, slight sheen. Expensive — only the best brands bother.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <strong>Silicone "softness" in the store</strong>
+  Cheap knits are coated in silicone emulsion to fake a buttery feel. Rub the fabric — if it leaves a faintly oily film on your fingers, that softness is going to wash out in two or three cycles.
+</div>
+
+<!-- ============ 6 PATTERN ============ -->
+<h2><span class="num">06</span>The Pattern (Engineering the Garment)</h2>
+<p>A brand can use the world's best Pima cotton, but if they don't understand human anatomy, the shirt will never sit right. This is where most "premium basics" actually fail.</p>
+
+<h3>The collar — where 90% of shirts die</h3>
+<div class="vs">
+  <div class="red-side">
+    <h4>Bad: rectangular ribbing, 100% cotton</h4>
+    <ul>
+      <li>Pattern makers cut the ribbing as a flat rectangle.</li>
+      <li>The neck isn't a cylinder — it's two curves meeting at the trapezius.</li>
+      <li>Excess fabric has nowhere to go → "bacon neck."</li>
+      <li>100% cotton has no recovery, so once it stretches, it stays stretched.</li>
+    </ul>
+  </div>
+  <div class="green-side">
+    <h4>Good: shaped ribbing with elastic</h4>
+    <ul>
+      <li>Two seams at the trapezius cut out the excess.</li>
+      <li>Ribbing is blended with elastane (spandex) or Sorona for recovery.</li>
+      <li>Pulls back into shape after every wear.</li>
+    </ul>
+  </div>
+</div>
+
+<h3>Shoulder seam placement</h3>
+<p>The shoulder isn't flat — it rolls slightly forward. A center shoulder seam looks great on a hanger and migrates all over your body in real life. A backwards-facing seam is fine on light fabric but on heavy fabric the weight pulls down the back and chokes your throat. The right answer is a <strong>forward-leaning shoulder seam</strong> that rides over the shoulder like a backpack strap, balancing the weight.</p>
+
+<h3>Armhole height</h3>
+<p>Deep armholes are easy to manufacture and "fit anyone" — but they anchor your sleeve to your torso, so the whole shirt rides up when you raise your arms. A high armhole takes anatomy seriously and lets you move.</p>
+
+<h3>Body shapes</h3>
+<table>
+  <thead><tr><th>Cut</th><th>Best for</th><th>Watch out</th></tr></thead>
+  <tbody>
+    <tr><td>Column / classic</td><td>Most bodies, most situations</td><td>The Swiss Army knife.</td></tr>
+    <tr><td>A-line</td><td>Covering a softer middle</td><td>Looks like a bell in heavy fabric.</td></tr>
+    <tr><td>Oversized / boxy</td><td>Trendy heavy-fabric look</td><td>Easy to execute — easy to overdo.</td></tr>
+    <tr><td>Tapered</td><td>Slim or athletic builds</td><td>European feel.</td></tr>
+    <tr><td>Tubular (no side seams)</td><td>Saving the brand money</td><td>Avoid — torques and twists over time. Humans aren't pop cans.</td></tr>
+  </tbody>
+</table>
+
+<!-- ============ 7 CRAFTSMANSHIP ============ -->
+<h2><span class="num">07</span>Craftsmanship</h2>
+
+<h3>Stitches per inch (SPI)</h3>
+<p>Think of stitches like nails holding a house together. Fewer stitches per inch = faster sewing machines = more shirts per hour = a seam that pops. Stretch a side seam gently — if you hear cracking, the SPI is too low.</p>
+
+<h3>Stitch types</h3>
+<table>
+  <thead><tr><th>Where</th><th>Stitch</th><th>Why it matters</th></tr></thead>
+  <tbody>
+    <tr><td>Side seams</td><td>Overlock</td><td>Standard, fine.</td></tr>
+    <tr><td>Hem &amp; sleeve cuffs</td><td>Cover stitch (often two-needle)</td><td>Holds folded fabric down cleanly.</td></tr>
+    <tr><td>Shoulder seam</td><td>Chain stitch + neck tape</td><td>Mechanical stretch — won't snap. Tape adds comfort.</td></tr>
+  </tbody>
+</table>
+
+<h3>How to visually inspect a shirt in 30 seconds</h3>
+<ul class="checklist">
+  <li>Look at the collar. If it already gapes or puckers in store, it'll only get worse.</li>
+  <li>Check the bottom hem — is it straight, or wavy and uneven left to right? Wavy = rushed.</li>
+  <li>Look for two seams at the back of the collar (shaped ribbing).</li>
+  <li>Tug the ribbing gently. Does it snap back? Is there a tiny shimmer of elastane?</li>
+  <li>Scan for loose threads, puckered seams, or knit grain that runs off-angle.</li>
+  <li>Check the shoulder seam — forward-leaning, not center or backwards on heavy fabric.</li>
+  <li>Press the fabric between two fingers. Oily residue = silicone fake softness.</li>
+</ul>
+
+<h3>AQL — Acceptable Quality Level</h3>
+<p>Garments are handmade at scale, so there's always tolerance — say half an inch on a chest measurement. High-end brands tighten that tolerance to 1/8 inch. A $1,000 shirt has a near-zero defect tolerance; a $5 fast fashion tee has none at all. Precision costs money: slower factories, rejected pieces, lower margins.</p>
+
+<div class="callout warn">
+  <strong>The "Dry Clean Only" tell</strong>
+  When a cotton tee says <em>Dry Clean Only</em>, one of two things is happening: the brand wants to feel premium, or they're so terrified of their own fabric they're trying to put any future failure on you.
+</div>
+
+<!-- ============ 8 SUMMARY ============ -->
+<h2><span class="num">08</span>The 60-Second Audit</h2>
+<p>Next time you're standing in a store with a shirt in your hands, run this:</p>
+
+<ul class="checklist">
+  <li><strong>Fiber:</strong> Combed Pima or better? Or just "100% cotton"?</li>
+  <li><strong>Yarn:</strong> Compact ring spun? Two-ply? Or rough &amp; "ring spun" in name only?</li>
+  <li><strong>Knit:</strong> Tight loops, substantial hand-feel? Interlock for stability?</li>
+  <li><strong>Dye:</strong> Reactive (long-life color) or sulfur/pigment (will fade sadly)?</li>
+  <li><strong>Finish:</strong> Mercerized? Or oily silicone-coated?</li>
+  <li><strong>Pattern:</strong> Shaped ribbed collar with elastane, forward shoulder seam, high armhole, side seams present.</li>
+  <li><strong>Craftsmanship:</strong> Even hem, clean grain, tight SPI, chain stitch on shoulders.</li>
+  <li><strong>Drape:</strong> Does it fall on the body or stick out like cardboard?</li>
+</ul>
+
+<div class="pull">"Don't look at the price. Don't look at the label. Feel the weight of the fabric. Look at the knit. Look at how it was made. You'll become the auditor of your own closet."</div>
+
+<footer>
+  Visual guide adapted from a video transcript on the architecture of cotton garments.
+</footer>
+
+</div>
+</body>
+</html>
