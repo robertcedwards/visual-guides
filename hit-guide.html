@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Body by Science — A Visual Guide to High Intensity Training</title>
+<meta name="description" content="12 minutes a week. One set per exercise. Zero wasted effort. The Doug McGuff / Mike Mentzer case for brief, infrequent, intense training — and why the science backs it up.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://robertcedwards.github.io/visual-guides/hit-guide.html">
+<meta property="og:title" content="Body by Science — High Intensity Training Guide">
+<meta property="og:description" content="12 minutes a week. One set per exercise. Zero wasted effort. The Doug McGuff case for brief, infrequent, intense training.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Body by Science — High Intensity Training Guide">
+<meta name="twitter:description" content="12 minutes a week. One set per exercise. Zero wasted effort. The Doug McGuff case for brief, infrequent, intense training.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23000'/><text x='16' y='22' text-anchor='middle' font-family='monospace' font-size='13' font-weight='700' fill='%23faf9f7'>vg</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf9f7;--black:#000;--white:#fff;
+    --oat:#dad4c8;--oat-lt:#eee9df;--muted:#9f9b93;--charcoal:#55534e;
+    --pom-200:#ffd5d8;--pom-400:#fc7981;--pom-600:#e8273a;--pom-700:#c5162a;--pom-800:#9e0e1c;
+    --matcha-600:#078a52;--bad:#a8341f;--good:#3a6b35;
+    --shadow-clay:rgba(0,0,0,.1) 0px 1px 1px,rgba(0,0,0,.04) 0px -1px 1px inset,rgba(0,0,0,.05) 0px -0.5px 1px;
+    --shadow-hard:rgb(0,0,0) -7px 7px;
+    --font:'Plus Jakarta Sans',Arial,sans-serif;--mono:'Space Mono',monospace;
+    --ink:var(--black);--accent:var(--pom-700);--card:var(--white);--line:var(--oat);--shadow:var(--shadow-clay);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
+  nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--oat);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .nav-logo{font-family:var(--mono);font-size:14px;font-weight:700;text-decoration:none;color:var(--black)}
+  .nav-links{display:flex;gap:8px;flex-wrap:wrap}
+  .nav-links a{font-size:15px;font-weight:500;color:var(--charcoal);text-decoration:none;padding:6px 14px;border-radius:1584px;transition:background .15s}
+  .nav-links a:hover{background:var(--oat-lt);color:var(--black)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 40px 96px}
+  header.hero{text-align:center;padding:80px 24px 64px;border-bottom:1px solid var(--oat);margin-bottom:56px}
+  .eyebrow{display:inline-block;font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.08px;color:var(--muted);border:1px dashed var(--oat);padding:4px 14px;border-radius:1584px;margin-bottom:24px}
+  h1{font-size:clamp(44px,6vw,72px);font-weight:600;line-height:1.0;letter-spacing:-2.4px;font-feature-settings:"ss01","ss03","ss10","ss11","ss12";margin:0 0 20px}
+  .sub{font-size:20px;font-weight:400;line-height:1.4;color:var(--muted);max-width:620px;margin:0 auto}
+  h2{font-size:clamp(26px,3.5vw,36px);font-weight:600;letter-spacing:-0.88px;font-feature-settings:"ss01","ss03","ss10","ss11","ss12";margin:72px 0 8px;padding-top:32px;border-top:1px solid var(--oat)}
+  h2 .num{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--pom-700);letter-spacing:.12em;text-transform:uppercase;vertical-align:middle;margin-right:12px;padding:3px 10px;border:1px solid var(--pom-400);border-radius:1584px;background:rgba(252,121,129,.12)}
+  h3{font-size:20px;font-weight:600;letter-spacing:-0.4px;margin:32px 0 8px;font-feature-settings:"ss01","ss03","ss10","ss11","ss12"}
+  p{margin:10px 0 16px}
+  .lede{font-size:18px;line-height:1.6;color:var(--charcoal);max-width:720px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0}
+  .card{background:var(--white);border:1px solid var(--oat);border-radius:24px;padding:24px;box-shadow:var(--shadow-clay)}
+  .card h4{margin:0 0 4px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.08px;font-family:var(--mono);color:var(--muted)}
+  .card p{margin:4px 0 0;font-size:14px;color:var(--muted)}
+  .card .stat{font-size:36px;font-weight:600;color:var(--pom-700);display:block;margin:6px 0 2px;letter-spacing:-1.2px;font-feature-settings:"ss01","ss03","ss10","ss11","ss12"}
+  table{width:100%;border-collapse:collapse;margin:24px 0;background:var(--white);border:1px solid var(--oat);border-radius:24px;overflow:hidden;box-shadow:var(--shadow-clay);font-size:15px}
+  th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--oat);vertical-align:top}
+  th{background:var(--oat-lt);font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+  tr:last-child td{border-bottom:none}
+  .callout{margin:24px 0;padding:20px 24px;border-left:4px solid var(--pom-400);background:rgba(252,121,129,.07);border-radius:0 12px 12px 0}
+  .callout.warn{border-left-color:var(--bad);background:rgba(168,52,31,.07)}
+  .callout.good{border-left-color:var(--good);background:rgba(58,107,53,.08)}
+  .callout strong{font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:6px;color:var(--pom-700)}
+  .callout.warn strong{color:var(--bad)}
+  .callout.good strong{color:var(--good)}
+
+  /* VS comparison */
+  .vs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+  .vs > div{padding:22px 24px;border-radius:24px;border:1px solid var(--oat);background:var(--white);box-shadow:var(--shadow-clay)}
+  .vs .a-side{border-top:4px solid var(--oat)}
+  .vs .b-side{border-top:4px solid var(--pom-600)}
+  .vs h4{margin:0 0 6px;font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+  .vs .tag{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-family:var(--mono)}
+  .vs ul{margin:10px 0 0 0;padding-left:18px;color:var(--charcoal);font-size:15px}
+  .vs li{margin:6px 0}
+
+  /* Exercise cards */
+  .exercise-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:24px 0}
+  .exercise{background:var(--white);border:1px solid var(--oat);border-radius:24px;padding:26px 24px;box-shadow:var(--shadow-clay);position:relative;overflow:hidden}
+  .exercise::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--pom-700)}
+  .ex-num{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--pom-700);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;display:block}
+  .exercise h3{margin:0 0 10px;font-size:20px}
+  .ex-muscle{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--pom-700);background:rgba(252,121,129,.1);border:1px solid var(--pom-200);padding:3px 10px;border-radius:1584px;margin-bottom:12px}
+  .exercise p{font-size:14px;color:var(--charcoal);margin:0 0 12px}
+  .exercise ul{margin:0;padding-left:18px;font-size:14px;color:var(--charcoal)}
+  .exercise li{margin:4px 0}
+  .ex-cue{font-family:var(--mono);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-top:14px;display:block;padding-top:12px;border-top:1px dashed var(--oat)}
+
+  /* Protocol steps */
+  .protocol-row{display:grid;grid-template-columns:80px 1fr;gap:16px;align-items:start;margin:0 0 20px;padding:16px 20px;background:var(--white);border:1px solid var(--oat);border-radius:16px;box-shadow:var(--shadow-clay)}
+  .proto-num{font-family:var(--mono);font-size:28px;font-weight:700;color:var(--pom-700);letter-spacing:-1px;line-height:1}
+  .proto-num span{display:block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:2px}
+  .protocol-row h4{margin:0 0 4px;font-size:15px;font-weight:600;letter-spacing:-0.3px}
+  .protocol-row p{margin:0;font-size:14px;color:var(--charcoal)}
+
+  /* Cadence diagram */
+  .cadence{margin:24px 0;padding:28px 32px;background:var(--white);border:1px solid var(--oat);border-radius:24px;box-shadow:var(--shadow-clay)}
+  .cadence h4{margin:0 0 20px;font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  .cadence-track{display:grid;grid-template-columns:1fr 60px 1fr 60px;gap:0;align-items:stretch}
+  .cadence-phase{padding:20px 18px;border-radius:16px;text-align:center}
+  .cadence-phase.lift{background:rgba(252,121,129,.1);border:1px solid var(--pom-200)}
+  .cadence-phase.lower{background:rgba(200,210,200,.12);border:1px solid var(--oat)}
+  .cadence-phase .phase-time{font-family:var(--mono);font-size:32px;font-weight:700;color:var(--pom-700);letter-spacing:-1px;display:block}
+  .cadence-phase.lower .phase-time{color:var(--charcoal)}
+  .cadence-phase .phase-label{font-family:var(--mono);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);display:block;margin-top:4px}
+  .cadence-phase p{font-size:13px;color:var(--charcoal);margin:10px 0 0}
+  .cadence-arrow{display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--muted)}
+
+  /* Recovery timeline */
+  .rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:24px 0}
+  .rec-card{background:var(--white);border:1px solid var(--oat);border-radius:24px;padding:22px;box-shadow:var(--shadow-clay)}
+  .rec-card .rec-icon{font-size:26px;display:block;margin-bottom:8px}
+  .rec-card h4{margin:0 0 6px;font-size:15px;font-weight:600;letter-spacing:-0.3px}
+  .rec-card p{font-size:13px;color:var(--charcoal);margin:0}
+  .rec-card .rec-time{font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--pom-700);background:rgba(252,121,129,.1);border:1px solid var(--pom-200);padding:3px 10px;border-radius:1584px;display:inline-block;margin-top:10px}
+
+  /* Comparison bars */
+  .bars{margin:24px 0;background:var(--white);border:1px solid var(--oat);border-radius:24px;padding:28px;box-shadow:var(--shadow-clay)}
+  .bars h4{margin:0 0 18px;font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  .bar-row{display:grid;grid-template-columns:200px 1fr 100px;gap:12px;align-items:center;margin:10px 0;font-size:14px}
+  .bar-row .label{color:var(--charcoal);font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+  .bar-row .track{background:var(--oat-lt);height:18px;border-radius:1584px;overflow:hidden}
+  .bar-row .fill{height:100%;border-radius:1584px}
+  .bar-row .val{font-family:var(--mono);font-size:12px;color:var(--pom-700);font-weight:700;text-align:right}
+  .fill.hit{background:var(--pom-600);width:12%}
+  .fill.moderate{background:var(--oat);width:60%}
+  .fill.high-vol{background:var(--oat);width:100%}
+  .fill.hit-result{background:var(--pom-600);width:92%}
+  .fill.mod-result{background:var(--oat);width:78%}
+  .fill.vol-result{background:var(--oat);width:65%}
+
+  /* Shopping */
+  .shop-section{background:var(--white);border:1px solid var(--oat);border-radius:24px;padding:28px;margin:24px 0;box-shadow:var(--shadow-clay)}
+  .shop-section h3{margin:0 0 4px;font-size:20px}
+  .shop-section .shop-intro{font-size:14px;color:var(--muted);margin:0 0 16px;padding-bottom:16px;border-bottom:1px solid var(--oat)}
+  .shop-item{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid var(--oat)}
+  .shop-item:last-of-type{border-bottom:none;padding-bottom:0}
+  .shop-item h4{margin:0 0 2px;font-size:16px;font-weight:600;letter-spacing:-0.3px}
+  .shop-item .shop-why{font-size:13px;color:var(--muted);margin:0}
+  .shop-item .shop-tag{font-family:var(--mono);font-size:10px;font-weight:700;text-transform:uppercase;color:var(--pom-700);background:rgba(252,121,129,.1);border:1px solid var(--pom-200);padding:2px 10px;border-radius:1584px;display:inline-block;margin-bottom:6px}
+  a.shop-link{font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;color:var(--pom-700);background:rgba(252,121,129,.12);border:1px solid var(--pom-400);padding:6px 14px;border-radius:1584px;white-space:nowrap;transition:all .15s}
+  a.shop-link:hover{background:var(--pom-700);color:var(--white);transform:rotateZ(-4deg);box-shadow:var(--shadow-hard)}
+  a.cart-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;color:var(--white);background:var(--pom-700);padding:12px 22px;border-radius:1584px;margin-top:16px;transition:all .15s}
+  a.cart-btn:hover{transform:rotateZ(-8deg) translateY(-4px);box-shadow:var(--shadow-hard)}
+  a.cart-btn svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+  .affiliate-note{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:var(--muted);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em;border:1px dashed var(--oat);padding:5px 14px;border-radius:1584px;margin:20px 0 0}
+  .affiliate-note::before{content:"★";color:var(--pom-700);font-size:10px}
+
+  .pull{font-family:var(--font);font-size:22px;font-weight:500;line-height:1.4;color:var(--charcoal);margin:32px auto;padding:20px 28px;border-left:4px solid var(--pom-400);background:rgba(252,121,129,.06);border-radius:0 12px 12px 0;max-width:780px}
+  footer{margin:80px 0 0;padding:40px 48px;border-radius:40px;border:1px dashed var(--oat);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  footer .f-brand{font-family:var(--mono);font-size:13px;font-weight:700}
+  footer p{font-size:13px;color:var(--muted);font-family:var(--mono);margin:0}
+  @media(max-width:767px){
+    nav{padding:0 20px}
+    .wrap{padding:0 20px 64px}
+    h2{font-size:26px}
+    .vs{grid-template-columns:1fr}
+    .exercise-grid{grid-template-columns:1fr}
+    .cadence-track{grid-template-columns:1fr;gap:8px}
+    .cadence-arrow{display:none}
+    .bar-row{grid-template-columns:120px 1fr 60px}
+    .shop-item{grid-template-columns:1fr;gap:10px}
+    footer{padding:28px 24px;flex-direction:column}
+  }
+</style>
+</head>
+<body>
+<div id="pb" style="position:fixed;top:0;left:0;width:0;height:3px;background:var(--pom-600);z-index:999;transition:width .08s linear;pointer-events:none"></div>
+
+<nav>
+  <a class="nav-logo" href="index.html">visual-guides</a>
+  <div class="nav-links">
+    <a href="cotton-quality-guide.html">Cotton</a>
+    <a href="gut-drink-guide.html">Gut Shake</a>
+    <a href="diy-running-nutrition-guide.html">Running</a>
+    <a href="sleep-stack-guide.html">Sleep</a>
+    <a href="hit-guide.html" style="background:rgba(252,121,129,.15);color:var(--pom-700)">HIT</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">McGuff · Mentzer · Little · Body by Science</div>
+  <h1>High Intensity Training</h1>
+  <p class="sub">12 minutes a week. One set per exercise. More strength, more muscle, better metabolic conditioning — and the science that explains why less is actually more.</p>
+</header>
+
+<p class="lede">The conventional model says you need hours in the gym, multiple sets per exercise, and frequent sessions to make progress. Doug McGuff, Mike Mentzer, John Little, and Arthur Jones before them all reached the same conclusion from different directions: that model is wrong. Not slightly miscalibrated — fundamentally wrong. This guide explains the mechanism, the protocol, and why the research has been catching up to their argument for 50 years.</p>
+
+<div class="pull">"Exercise is medicine. Like all medicine, there is a dosage. Too little has no effect. The right amount produces the desired adaptation. Too much produces damage." — Doug McGuff</div>
+
+<h2><span class="num">01</span> At a Glance</h2>
+<p>The numbers that make conventional gym-goers skeptical — until they try it.</p>
+
+<div class="grid">
+  <div class="card">
+    <h4>Total weekly workout time</h4>
+    <span class="stat">~12 min</span>
+    <p>The Big 5 done correctly takes 12–20 minutes. Once per week.</p>
+  </div>
+  <div class="card">
+    <h4>Sets per exercise</h4>
+    <span class="stat">1</span>
+    <p>One set, taken to momentary muscular failure. That's the entire stimulus.</p>
+  </div>
+  <div class="card">
+    <h4>Rep cadence</h4>
+    <span class="stat">5 / 5</span>
+    <p>5 seconds positive (lifting), 5 seconds negative (lowering). No momentum.</p>
+  </div>
+  <div class="card">
+    <h4>Time between workouts</h4>
+    <span class="stat">7–14 days</span>
+    <p>Beginners: minimum 7 days. Intermediate/advanced: 10–14 days. More is fine.</p>
+  </div>
+</div>
+
+<h2><span class="num">02</span> The Argument</h2>
+<p>Why the conventional high-volume approach isn't just unnecessary — it's actively getting in the way.</p>
+
+<div class="vs">
+  <div class="a-side">
+    <h4>Conventional Training</h4>
+    <span class="tag">The standard model</span>
+    <ul>
+      <li>4–6 days per week in the gym</li>
+      <li>Multiple sets per exercise (3–5)</li>
+      <li>Moderate loads, faster reps</li>
+      <li>Hours of weekly volume</li>
+      <li>Distinction between "strength" and "cardio" days</li>
+      <li>Difficulty separating stimulus from recovery</li>
+      <li>Results plateau without adding more volume</li>
+    </ul>
+  </div>
+  <div class="b-side">
+    <h4>High Intensity Training</h4>
+    <span class="tag">The McGuff / Mentzer model</span>
+    <ul>
+      <li>Once per week (sometimes less)</li>
+      <li>One set per exercise, to failure</li>
+      <li>Heavy loads, controlled cadence</li>
+      <li>12–20 minutes of actual training</li>
+      <li>One workout addresses strength and metabolic conditioning simultaneously</li>
+      <li>Clear separation: brief stimulus, long recovery, then adaptation</li>
+      <li>Progress comes from more recovery, not more volume</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout">
+  <strong>The Mentzer lineage</strong>
+  Arthur Jones invented Nautilus machines in the 1970s specifically to test the HIT hypothesis — can one set to failure produce superior results? Mike Mentzer trained under Jones, developed Heavy Duty training, and coached Dorian Yates — who won six Mr. Olympia titles using essentially one working set per exercise. Doug McGuff added the physiological framework in Body by Science (2009). John Little contributed research on MaxContraction and collaborated with McGuff on the book. The lineage is 50 years old and the results are consistent.
+</div>
+
+<h2><span class="num">03</span> The Science</h2>
+<p>Three concepts explain why brief, intense training works as well or better than high volume.</p>
+
+<div class="protocol-row">
+  <div class="proto-num">01<span>Concept</span></div>
+  <div>
+    <h4>Motor Unit Recruitment</h4>
+    <p>Your muscles contain hundreds of motor units — bundles of muscle fibers controlled by a single nerve. Your nervous system recruits them in order from smallest (slow-twitch, fatigue-resistant) to largest (fast-twitch, high-force). The critical insight: <strong>you cannot recruit the high-threshold fast-twitch units with moderate loads</strong>, even for many sets. You can only get there by fatiguing the lower-threshold units first — which is exactly what a set taken to failure does. One slow, grinding set recruits every available motor unit. A fast set with a moderate load recruits far fewer, regardless of how many sets you do.</p>
+  </div>
+</div>
+
+<div class="protocol-row">
+  <div class="proto-num">02<span>Concept</span></div>
+  <div>
+    <h4>Stimulus → Recovery → Adaptation</h4>
+    <p>McGuff describes three distinct biological phases. The training stimulus (the workout) is a catabolic event — you break down tissue and deplete energy systems. Recovery is the repair phase. Adaptation (growth, increased strength) occurs <em>after</em> recovery completes — only if you haven't trained again prematurely. Most people interrupt the adaptation phase by training too frequently. The stimulus is brief; the recovery and adaptation process takes days to over a week. Exercising again before adaptation completes means you're always recovering, never growing.</p>
+  </div>
+</div>
+
+<div class="protocol-row">
+  <div class="proto-num">03<span>Concept</span></div>
+  <div>
+    <h4>Inroad and the Dose-Response Curve</h4>
+    <p>"Inroad" is McGuff's term for the percentage reduction in momentary strength that occurs during a set — the training signal. At around 20–30% inroad (significant fatigue), you've created a sufficient stimulus for adaptation across all recruited motor units. More sets don't meaningfully increase the signal — they extend the recovery demand without adding training stimulus. This is the dose-response argument: like a medication, the right dose produces the desired effect; beyond that dose, you accumulate damage without additional benefit. The Big 5 protocol is calibrated to create the minimum necessary inroad.</p>
+  </div>
+</div>
+
+<div class="callout good">
+  <strong>The metabolic bonus</strong>
+  The Big 5 done to failure isn't just strength training — it's profound metabolic conditioning. When you take large compound movements to failure with a slow cadence, you deplete glycogen in all three metabolic pathways simultaneously (phosphagen, glycolytic, oxidative). The metabolic response rivals or exceeds that of conventional cardio, without the joint stress or recovery cost. McGuff's ER physician perspective: the Big 5 protocol produces more cardiovascular benefit than running, for the people who need it most (those who can't run).
+</div>
+
+<h2><span class="num">04</span> The Big 5</h2>
+<p>Five compound movements that cover every major muscle group. Done in sequence, they address the full body in a single short workout.</p>
+
+<div class="exercise-grid">
+
+  <div class="exercise">
+    <span class="ex-num">Exercise 1 of 5</span>
+    <h3>Leg Press</h3>
+    <span class="ex-muscle">Quads · Glutes · Hamstrings</span>
+    <p>The largest muscle mass in the body. Starting here drives maximum metabolic response — your cardiovascular system will feel this before you've left the first machine.</p>
+    <ul>
+      <li>Adjust seat so knees are at ~90° at bottom</li>
+      <li>Press smoothly — no lockout at the top (keeps tension on the muscle)</li>
+      <li>Control the return — don't let the weight drop or bounce</li>
+      <li>When you can no longer complete a full rep, perform "partials" in the strongest range until even those fail</li>
+    </ul>
+    <span class="ex-cue">Key cue: Never fully lock the knees. Keep tension throughout.</span>
+  </div>
+
+  <div class="exercise">
+    <span class="ex-num">Exercise 2 of 5</span>
+    <h3>Seated Row</h3>
+    <span class="ex-muscle">Lats · Rhomboids · Rear Delts · Biceps</span>
+    <p>The primary pulling movement for the back. A full stretch at the start and a full contraction at the finish are both critical — most people cheat both ends.</p>
+    <ul>
+      <li>Start with arms fully extended — feel the stretch in the lats</li>
+      <li>Pull to lower abdomen, elbows driving back behind the body</li>
+      <li>Squeeze the shoulder blades together at the finish</li>
+      <li>Resist the return — don't let momentum pull you forward</li>
+    </ul>
+    <span class="ex-cue">Key cue: Lead with the elbows, not the hands. The arms are cables.</span>
+  </div>
+
+  <div class="exercise">
+    <span class="ex-num">Exercise 3 of 5</span>
+    <h3>Chest Press</h3>
+    <span class="ex-muscle">Pecs · Anterior Delts · Triceps</span>
+    <p>The primary horizontal push. The machine version (vs. barbell) allows a fuller range without requiring a spotter, which matters when you're pressing to failure alone.</p>
+    <ul>
+      <li>Adjust handles so they're at mid-chest height at the start</li>
+      <li>Full stretch at the back — chest opens up to the ceiling</li>
+      <li>Press smoothly — no explosive start, no lockout at the finish</li>
+      <li>Control the negative with 5 full seconds</li>
+    </ul>
+    <span class="ex-cue">Key cue: The negative (lowering) is doing as much work as the positive. Own it.</span>
+  </div>
+
+  <div class="exercise">
+    <span class="ex-num">Exercise 4 of 5</span>
+    <h3>Pulldown</h3>
+    <span class="ex-muscle">Lats · Biceps · Mid-Back</span>
+    <p>The vertical pull, balancing the overhead press. Together these two exercises cover the shoulder joint through its full range. Full overhead extension at the top is important — most people start from a half-stretch.</p>
+    <ul>
+      <li>Arms fully extended overhead at the start — real extension, not just hands at forehead height</li>
+      <li>Pull bar to upper chest, elbows driving down and back</li>
+      <li>Brief pause at contraction before the slow return</li>
+      <li>Let the weight fully stretch the lats at the top of each rep</li>
+    </ul>
+    <span class="ex-cue">Key cue: Think "elbows to back pockets." The hands just hold the bar.</span>
+  </div>
+
+  <div class="exercise">
+    <span class="ex-num">Exercise 5 of 5</span>
+    <h3>Overhead Press</h3>
+    <span class="ex-muscle">Deltoids · Triceps · Upper Traps</span>
+    <p>The vertical push. Often the most difficult to reach failure on because the triceps lock up before the deltoids are fully exhausted. Partial reps at the top range extend the stimulus.</p>
+    <ul>
+      <li>Handles at shoulder height to start, elbows slightly forward of the body</li>
+      <li>Press straight overhead — no arching the lower back</li>
+      <li>Stop just short of lockout at the top</li>
+      <li>Lower fully — arms back to start position with control</li>
+    </ul>
+    <span class="ex-cue">Key cue: Brace the core throughout. Your low back should not be doing this.</span>
+  </div>
+
+</div>
+
+<h2><span class="num">05</span> The Rep Protocol</h2>
+<p>The cadence is not optional — it's the mechanism. Without it, you reintroduce momentum and defeat the purpose.</p>
+
+<div class="cadence">
+  <h4>5 / 5 Cadence — One rep, broken down</h4>
+  <div class="cadence-track">
+    <div class="cadence-phase lift">
+      <span class="phase-time">5s</span>
+      <span class="phase-label">Positive (Lift)</span>
+      <p>Smooth, continuous movement through the full range. No explosive start. Think about the muscle contracting, not the weight moving.</p>
+    </div>
+    <div class="cadence-arrow">→</div>
+    <div class="cadence-phase lower">
+      <span class="phase-time">5s</span>
+      <span class="phase-label">Negative (Lower)</span>
+      <p>Resist the weight actively on the way down. The negative portion recruits as much muscle as the positive — don't surrender it to gravity.</p>
+    </div>
+    <div class="cadence-arrow">≈</div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h4>Turnaround</h4>
+    <p style="color:var(--black);font-size:15px">At the top and bottom of each rep, make a smooth directional change — no bouncing, no pause to rest. The tension should never leave the muscle.</p>
+  </div>
+  <div class="card">
+    <h4>Target TUL</h4>
+    <span class="stat">90s</span>
+    <p>Time Under Load per set. 60–120 seconds is the working range. When you can exceed the top of the range, add weight next session.</p>
+  </div>
+  <div class="card">
+    <h4>Momentary Muscular Failure</h4>
+    <p style="color:var(--black);font-size:15px">The target endpoint. You cannot complete another rep with proper form — not "it's getting hard," not "I've done 8 reps." The muscle genuinely cannot produce more force. This is when the last high-threshold motor units are being recruited.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <strong>The most common mistake</strong>
+  Stopping at a rep target instead of failure. If you've decided to do "8 reps at 5/5," you've pre-committed to stopping before failure — which means you haven't fully recruited high-threshold motor units. The rep count is a byproduct of time under load, not a goal. Train to failure, record the TUL, and use that to adjust weight next session.
+</div>
+
+<h2><span class="num">06</span> A Complete Workout</h2>
+<p>What the actual session looks like from walk-in to walk-out.</p>
+
+<table>
+  <tr><th>Step</th><th>What happens</th><th>Time</th></tr>
+  <tr>
+    <td><strong>Walk in, set up machine 1</strong></td>
+    <td>Adjust leg press seat, set weight. The slow cadence is its own warm-up — you don't need a separate warm-up set.</td>
+    <td>2–3 min</td>
+  </tr>
+  <tr>
+    <td><strong>Leg Press to MMF</strong></td>
+    <td>5/5 cadence. Keep going past where it's hard, past where your face is doing things, until the muscle cannot produce another positive movement. Note your TUL.</td>
+    <td>60–120 sec</td>
+  </tr>
+  <tr>
+    <td><strong>Move to machine 2</strong></td>
+    <td>Move immediately — don't rest more than 30–60 seconds between exercises. Some advocates prefer no rest between. You'll be breathing hard; that's appropriate.</td>
+    <td>30–60 sec</td>
+  </tr>
+  <tr>
+    <td><strong>Seated Row to MMF</strong></td>
+    <td>Same protocol. Focus on the stretch at extension and the contraction at the finish. Note TUL.</td>
+    <td>60–120 sec</td>
+  </tr>
+  <tr>
+    <td><strong>Chest Press to MMF</strong></td>
+    <td>Your upper body is still partially fatigued from the row — that's fine. You're working different planes. To MMF.</td>
+    <td>60–120 sec</td>
+  </tr>
+  <tr>
+    <td><strong>Pulldown to MMF</strong></td>
+    <td>Arms are becoming fatigued. The biceps fatigue before the lats — when the arms give out, try to continue pulling by "thinking about the elbows" rather than the hands.</td>
+    <td>60–120 sec</td>
+  </tr>
+  <tr>
+    <td><strong>Overhead Press to MMF</strong></td>
+    <td>The shoulders and triceps finish the session. Partial reps at the top of the movement can extend the stimulus after full reps are impossible.</td>
+    <td>60–120 sec</td>
+  </tr>
+  <tr>
+    <td><strong>Done. Go home.</strong></td>
+    <td>Total workout time: 12–20 minutes. Log your weights and TUL for each exercise. The next session is 7–14 days away.</td>
+    <td>—</td>
+  </tr>
+</table>
+
+<h2><span class="num">07</span> Recovery & Frequency</h2>
+<p>This is the part most people get wrong — and it's more important than the workout itself.</p>
+
+<div class="rec-grid">
+  <div class="rec-card">
+    <span class="rec-icon">🔬</span>
+    <h4>Muscle protein synthesis timeline</h4>
+    <p>After a genuinely intense set to failure, elevated muscle protein synthesis continues for 72+ hours. The repair and growth process is biochemically active for 3–7 days post-workout. Training again during this window interrupts the adaptation, not just recovery.</p>
+    <span class="rec-time">72+ hrs synthesis elevated</span>
+  </div>
+  <div class="rec-card">
+    <span class="rec-icon">🌱</span>
+    <h4>Beginners: 7 days minimum</h4>
+    <p>New trainees have an advantage — they produce a large stimulus easily. But they also have less recovery capacity. One week between sessions is the floor, not a suggestion. Many beginners make their best gains on an 8–10 day cycle.</p>
+    <span class="rec-time">7–10 days between sessions</span>
+  </div>
+  <div class="rec-card">
+    <span class="rec-icon">⚙️</span>
+    <h4>Intermediate/advanced: 10–14 days</h4>
+    <p>As you get stronger, you can generate a larger stimulus — which requires more recovery. Advanced trainees training with genuinely heavy loads to failure often find their strength peaks at 12–14 day intervals. If you plateau, try adding a rest day before adding volume.</p>
+    <span class="rec-time">10–14 days between sessions</span>
+  </div>
+  <div class="rec-card">
+    <span class="rec-icon">😴</span>
+    <h4>Signs you came back too soon</h4>
+    <p>You can't match your previous session's weights. You're still sore. Your motivation is low and the workout feels terrible from the start. These are signals, not character flaws. Add 2–3 days and try again.</p>
+    <span class="rec-time">If in doubt, wait more</span>
+  </div>
+</div>
+
+<div class="pull">"Most people are chronically overtrained and don't know it. They've never been fully recovered, so they don't know what 'fully recovered' feels like." — John Little</div>
+
+<h2><span class="num">08</span> Progression</h2>
+<p>The only metric that matters: are you lifting more weight or completing more time under load than last session?</p>
+
+<div class="protocol-row">
+  <div class="proto-num">01<span>Rule</span></div>
+  <div>
+    <h4>Form Before Load</h4>
+    <p>The protocol only works if the movement is strict — no momentum, full range, proper turnaround at each end. If you increase load and your cadence degrades or you start using body English to complete reps, the weight is too high. Pull back and nail the form first. Every rep of every session should be technically identical; only the weight and TUL change over time.</p>
+  </div>
+</div>
+
+<div class="protocol-row">
+  <div class="proto-num">02<span>Rule</span></div>
+  <div>
+    <h4>The Double-Target System</h4>
+    <p>Set a TUL range for each exercise — say, 60–90 seconds. When you can complete 90 seconds with perfect form, add approximately 5% weight at your next session. The increased load will drop your TUL back toward the bottom of the range. Work back up to the top. This creates steady progression without guesswork. Never add load and time simultaneously.</p>
+  </div>
+</div>
+
+<div class="protocol-row">
+  <div class="proto-num">03<span>Rule</span></div>
+  <div>
+    <h4>Log Everything</h4>
+    <p>Date, exercise, weight, TUL. That's all you need. With sessions 7–14 days apart it's easy to forget exact numbers — and the whole system depends on knowing whether you improved. A simple notebook or spreadsheet is sufficient. The log also lets you see patterns: if leg press TUL is declining over several sessions, you need more rest, not less.</p>
+  </div>
+</div>
+
+<div class="protocol-row">
+  <div class="proto-num">04<span>Rule</span></div>
+  <div>
+    <h4>Plateaus Are Recovery Problems</h4>
+    <p>In conventional training, a plateau usually means adding volume or changing the stimulus. In HIT, a plateau almost always means insufficient recovery. Before changing the exercises, the weights, or the protocol — add 3–4 days to your rest interval and see if performance returns. This works the large majority of the time.</p>
+  </div>
+</div>
+
+<h2><span class="num">09</span> What to Drop</h2>
+<p>The things most commonly layered onto HIT that undermine it — and why.</p>
+
+<table>
+  <tr><th>Common addition</th><th>Why it conflicts with HIT</th></tr>
+  <tr>
+    <td><strong>Steady-state cardio</strong></td>
+    <td>Competes for recovery resources and creates its own systemic fatigue. McGuff argues the Big 5 produces equivalent or superior cardiovascular benefit without the interference. If you enjoy running, do it — but don't expect the same strength and muscle gains, and watch whether it extends your recovery window.</td>
+  </tr>
+  <tr>
+    <td><strong>Adding sets "just in case"</strong></td>
+    <td>One set to failure creates the complete training stimulus. A second set does not double the stimulus — it only extends the recovery requirement. If the first set was truly to failure with a controlled cadence, there is nothing left to stimulate. A second set is noise that costs recovery time.</td>
+  </tr>
+  <tr>
+    <td><strong>Training when sore</strong></td>
+    <td>Soreness is a signal that the previous stimulus hasn't fully resolved. Training through it doesn't accelerate adaptation — it interrupts it. Wait until soreness is gone and then add a day or two on top of that.</td>
+  </tr>
+  <tr>
+    <td><strong>Faster reps to "feel the pump"</strong></td>
+    <td>The pump from fast reps is blood pooling from occlusion, not meaningful motor unit recruitment. The 5/5 cadence feels less dramatic than traditional lifting, which is why it works — you're doing physiological work, not theater.</td>
+  </tr>
+  <tr>
+    <td><strong>Comparing to gym regulars</strong></td>
+    <td>Someone training 5 days a week will always look like they're working harder. The question is whether they're producing more adaptation per unit of recovery cost. The HIT argument is that they aren't — but you won't feel vindicated in the moment.</td>
+  </tr>
+</table>
+
+<h2><span class="num">10</span> Reading List</h2>
+<p>The three books that form the intellectual foundation of HIT. Worth reading in order.</p>
+
+<div class="shop-section">
+  <h3>Essential Reading</h3>
+  <p class="shop-intro">These are the primary source texts — not fitness books in the usual sense, but rigorous arguments for a specific model of exercise physiology.</p>
+
+  <div class="shop-item">
+    <div>
+      <span class="shop-tag">The Core Text</span>
+      <h4>Body by Science — Doug McGuff & John Little</h4>
+      <p class="shop-why">The primary source. McGuff's physician background gives the physiological arguments unusual rigor. Part exercise science, part philosophy of training. Chapter 2 on motor unit recruitment alone is worth the price.</p>
+    </div>
+    <a class="shop-link" href="https://www.amazon.com/dp/0071597174?tag=coactlabcom-20" target="_blank" rel="noopener">View →</a>
+  </div>
+
+  <div class="shop-item">
+    <div>
+      <span class="shop-tag">The Original Argument</span>
+      <h4>High-Intensity Training the Mike Mentzer Way</h4>
+      <p class="shop-why">Mentzer's collected writing on Heavy Duty training — shorter and more polemical than Body by Science, but the original intellectual case made by someone who also lived it as a competitive bodybuilder. Dorian Yates trained this way.</p>
+    </div>
+    <a class="shop-link" href="https://www.amazon.com/dp/0071383301?tag=coactlabcom-20" target="_blank" rel="noopener">View →</a>
+  </div>
+
+  <div class="shop-item">
+    <div>
+      <span class="shop-tag">The Practical Manual</span>
+      <h4>Body by Science Question and Answer — McGuff & Little</h4>
+      <p class="shop-why">The follow-up that addresses every common objection and edge case — home training, older trainees, athletes adapting the protocol to their sport, cardio integration. If you have questions after the first book, this one answers them.</p>
+    </div>
+    <a class="shop-link" href="https://www.amazon.com/dp/0071849890?tag=coactlabcom-20" target="_blank" rel="noopener">View →</a>
+  </div>
+
+  <a class="cart-btn" href="https://www.amazon.com/gp/aws/cart/add.html?AssociateTag=coactlabcom-20&tag=coactlabcom-20&ASIN.1=0071597174&Quantity.1=1&ASIN.2=0071383301&Quantity.2=1&ASIN.3=0071849890&Quantity.3=1" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM7.16 14.26l.04-.12.94-1.7h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 20.04 4H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7.42c-.14 0-.25-.11-.26-.25z"/></svg>
+    Add All 3 Books to Cart
+  </a>
+</div>
+
+<p class="affiliate-note">Affiliate links — support this site at no extra cost to you</p>
+
+<div class="callout">
+  <strong>Where to train</strong>
+  The Big 5 requires plate-loaded machines with a good resistance curve — ideally Nautilus, MedX, or Hammer Strength. Most commercial gyms have at least adequate versions. The leg press, cable row, chest press, lat pulldown, and shoulder press machines are ubiquitous. At-home alternatives exist (bands, bodyweight progressions) but the load increments and range of motion of a good machine make the protocol significantly easier to implement and track.
+</div>
+
+<h2><span class="num">11</span> The Takeaway</h2>
+<p>The hardest part of HIT isn't the workout — it's accepting that 12 minutes once a week is sufficient. The conventional fitness culture has a strong prior that more is better, and watching other people train for hours while you're done in 20 minutes creates cognitive dissonance. The answer is the log. If your weights and TUL are improving session to session, the protocol is working. If they're not, almost always the answer is more rest — not more training.</p>
+
+<p>McGuff, Mentzer, and Little were working against a culture that equated visible effort with results. Their argument isn't that training is easy — a true set to failure is one of the hardest things you'll do in a gym. It's that training should be brief, complete, and infrequent, so that the biological processes that actually produce results have the time and resources to do their work.</p>
+
+<div class="pull">"The workout is the stimulus. You don't grow in the gym. You grow in the time between workouts — if you've given that time the respect it deserves."</div>
+
+<footer>
+  <span class="f-brand">visual-guides / hit</span>
+  <p>Educational guide based on published works by McGuff, Mentzer & Little. Not a substitute for professional medical or fitness advice. Made with care by a human + Claude.</p>
+</footer>
+
+</div>
+<script>(function(){var pb=document.getElementById('pb');window.addEventListener('scroll',function(){var s=document.documentElement,t=s.scrollTop,h=s.scrollHeight-s.clientHeight;pb.style.width=(h>0?t/h*100:0)+'%';},{passive:true});})();</script>
+</body>
+</html>
