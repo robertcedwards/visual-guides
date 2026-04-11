@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sleep Stack — A Visual Guide to Evidence-Based Sleep Optimization</title>
+<meta name="description" content="Four compounds, one protocol, meaningfully better sleep. The evidence-based sleep stack explained — what it is, when to take it, and what to buy.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://robertcedwards.github.io/visual-guides/sleep-stack-guide.html">
+<meta property="og:title" content="The Sleep Stack — Evidence-Based Sleep Optimization Guide">
+<meta property="og:description" content="Four compounds, one protocol, meaningfully better sleep. What to take, when to take it, and what the research actually shows.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Sleep Stack — Evidence-Based Sleep Optimization Guide">
+<meta name="twitter:description" content="Four compounds, one protocol, meaningfully better sleep. What to take, when to take it, and what the research actually shows.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23000'/><text x='16' y='22' text-anchor='middle' font-family='monospace' font-size='13' font-weight='700' fill='%23faf9f7'>vg</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf9f7;--black:#000;--white:#fff;
+    --oat:#dad4c8;--oat-lt:#eee9df;--muted:#9f9b93;--charcoal:#55534e;
+    --ube-200:#e4d6ff;--ube-400:#a78bfa;--ube-600:#7c3aed;--ube-700:#43089f;--ube-800:#2d0670;
+    --matcha-600:#078a52;--bad:#a8341f;--good:#3a6b35;
+    --shadow-clay:rgba(0,0,0,.1) 0px 1px 1px,rgba(0,0,0,.04) 0px -1px 1px inset,rgba(0,0,0,.05) 0px -0.5px 1px;
+    --shadow-hard:rgb(0,0,0) -7px 7px;
+    --font:'Plus Jakarta Sans',Arial,sans-serif;--mono:'Space Mono',monospace;
+    /* semantic aliases */
+    --ink:var(--black);--accent:var(--ube-700);--card:var(--white);--line:var(--oat);--shadow:var(--shadow-clay);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
+  nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--oat);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .nav-logo{font-family:var(--mono);font-size:14px;font-weight:700;text-decoration:none;color:var(--black)}
+  .nav-links{display:flex;gap:8px}
+  .nav-links a{font-size:15px;font-weight:500;color:var(--charcoal);text-decoration:none;padding:6px 14px;border-radius:1584px;transition:background .15s}
+  .nav-links a:hover{background:var(--oat-lt);color:var(--black)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 40px 96px}
+  header.hero{text-align:center;padding:80px 24px 64px;border-bottom:1px solid var(--oat);margin-bottom:56px}
+  .eyebrow{display:inline-block;font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.08px;color:var(--muted);border:1px dashed var(--oat);padding:4px 14px;border-radius:1584px;margin-bottom:24px}
+  h1{font-size:clamp(44px,6vw,72px);font-weight:600;line-height:1.0;letter-spacing:-2.4px;font-feature-settings:"ss01","ss03","ss10","ss11","ss12";margin:0 0 20px}
+  .sub{font-size:20px;font-weight:400;line-height:1.4;color:var(--muted);max-width:620px;margin:0 auto}
+  h2{font-size:clamp(26px,3.5vw,36px);font-weight:600;letter-spacing:-0.88px;font-feature-settings:"ss01","ss03","ss10","ss11","ss12";margin:72px 0 8px;padding-top:32px;border-top:1px solid var(--oat)}
+  h2 .num{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--ube-700);letter-spacing:.12em;text-transform:uppercase;vertical-align:middle;margin-right:12px;padding:3px 10px;border:1px solid var(--ube-400);border-radius:1584px;background:rgba(167,139,250,.12)}
+  h3{font-size:20px;font-weight:600;letter-spacing:-0.4px;margin:32px 0 8px;font-feature-settings:"ss01","ss03","ss10","ss11","ss12"}
+  p{margin:10px 0 16px}
+  .lede{font-size:18px;line-height:1.6;color:var(--charcoal);max-width:720px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0}
+  .card{background:var(--white);border:1px solid var(--oat);border-radius:24px;padding:24px;box-shadow:var(--shadow-clay)}
+  .card h4{margin:0 0 4px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.08px;font-family:var(--mono);color:var(--muted)}
+  .card p{margin:4px 0 0;font-size:14px;color:var(--muted)}
+  .card .stat{font-size:36px;font-weight:600;color:var(--ube-700);display:block;margin:6px 0 2px;letter-spacing:-1.2px;font-feature-settings:"ss01","ss03","ss10","ss11","ss12"}
+  table{width:100%;border-collapse:collapse;margin:24px 0;background:var(--white);border:1px solid var(--oat);border-radius:24px;overflow:hidden;box-shadow:var(--shadow-clay);font-size:15px}
+  th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--oat);vertical-align:top}
+  th{background:var(--oat-lt);font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+  tr:last-child td{border-bottom:none}
+  .callout{margin:24px 0;padding:20px 24px;border-left:4px solid var(--ube-400);background:rgba(167,139,250,.08);border-radius:0 12px 12px 0}
+  .callout.warn{border-left-color:var(--bad);background:rgba(168,52,31,.07)}
+  .callout.good{border-left-color:var(--good);background:rgba(58,107,53,.08)}
+  .callout strong{font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:6px;color:var(--ube-700)}
+  .callout.warn strong{color:var(--bad)}
+  .callout.good strong{color:var(--good)}
+  /* Stack compounds */
+  .compound-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:24px 0}
+  .compound{background:var(--white);border:1px solid var(--oat);border-radius:24px;padding:28px 24px;box-shadow:var(--shadow-clay);position:relative;overflow:hidden}
+  .compound::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--ube-700)}
+  .compound.opt::before{background:var(--ube-400)}
+  .compound-num{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--ube-700);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;display:block}
+  .compound.opt .compound-num{color:var(--ube-400)}
+  .compound h3{margin:0 0 6px;font-size:22px}
+  .compound .dose{display:inline-block;font-family:var(--mono);font-size:13px;font-weight:700;color:var(--ube-700);background:rgba(167,139,250,.12);border:1px solid var(--ube-200);padding:3px 12px;border-radius:1584px;margin-bottom:12px}
+  .compound p{font-size:14px;color:var(--charcoal);margin:0}
+  .compound .timing-tag{font-family:var(--mono);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:14px;display:block;padding-top:12px;border-top:1px solid var(--oat)}
+  /* Timing timeline */
+  .timeline{margin:24px 0;padding:28px 32px;background:var(--white);border:1px solid var(--oat);border-radius:24px;box-shadow:var(--shadow-clay)}
+  .timeline h4{margin:0 0 24px;font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  .tl-track{position:relative;padding-left:28px}
+  .tl-track::before{content:'';position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:var(--oat)}
+  .tl-item{position:relative;margin:0 0 20px;padding:14px 18px;background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.18);border-radius:12px}
+  .tl-item::before{content:'';position:absolute;left:-24px;top:50%;transform:translateY(-50%);width:10px;height:10px;background:var(--ube-700);border-radius:50%;border:2px solid var(--bg)}
+  .tl-item.light::before{background:var(--ube-400)}
+  .tl-item.faint::before{background:var(--oat)}
+  .tl-time{font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ube-700);margin-bottom:4px;display:block}
+  .tl-item.light .tl-time{color:var(--ube-400)}
+  .tl-item.faint .tl-time{color:var(--muted)}
+  .tl-item b{font-size:15px;font-weight:600}
+  .tl-item p{font-size:13px;color:var(--muted);margin:2px 0 0}
+  /* Avoid list */
+  .avoid-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}
+  .avoid-card{background:var(--white);border:1px solid var(--oat);border-radius:24px;padding:22px;box-shadow:var(--shadow-clay)}
+  .avoid-card .avoid-icon{font-size:28px;display:block;margin-bottom:10px}
+  .avoid-card h4{margin:0 0 6px;font-size:15px;font-weight:600;letter-spacing:-0.3px}
+  .avoid-card p{font-size:13px;color:var(--charcoal);margin:0}
+  .avoid-card .avoid-rule{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--bad);background:rgba(168,52,31,.07);border:1px solid rgba(168,52,31,.2);padding:3px 10px;border-radius:1584px;margin:10px 0 0}
+  /* Environment cards */
+  .env-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0}
+  .env-card{background:var(--white);border:1px solid var(--oat);border-radius:24px;padding:22px;box-shadow:var(--shadow-clay);display:flex;flex-direction:column;gap:8px}
+  .env-card .env-icon{font-size:24px}
+  .env-card h4{margin:0;font-size:15px;font-weight:600;letter-spacing:-0.3px}
+  .env-card p{margin:0;font-size:13px;color:var(--charcoal)}
+  .env-card .env-tag{font-family:var(--mono);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ube-700);background:rgba(167,139,250,.1);border:1px solid var(--ube-200);padding:3px 10px;border-radius:1584px;display:inline-block;align-self:flex-start}
+  /* Shopping */
+  .shop-item{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid var(--oat)}
+  .shop-item:last-of-type{border-bottom:none}
+  .shop-item h4{margin:0 0 2px;font-size:16px;font-weight:600;letter-spacing:-0.3px}
+  .shop-item .shop-why{font-size:13px;color:var(--muted);margin:0}
+  .shop-item .shop-dose{font-family:var(--mono);font-size:10px;font-weight:700;text-transform:uppercase;color:var(--ube-700);background:rgba(167,139,250,.1);border:1px solid var(--ube-200);padding:2px 10px;border-radius:1584px;display:inline-block;margin-bottom:6px}
+  a.shop-link{font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;color:var(--ube-700);background:rgba(167,139,250,.12);border:1px solid var(--ube-400);padding:6px 14px;border-radius:1584px;white-space:nowrap;transition:all .15s}
+  a.shop-link:hover{background:var(--ube-700);color:var(--white);transform:rotateZ(-4deg);box-shadow:var(--shadow-hard)}
+  .shop-section{background:var(--white);border:1px solid var(--oat);border-radius:24px;padding:28px 28px;margin:24px 0;box-shadow:var(--shadow-clay)}
+  .shop-section h3{margin:0 0 4px;font-size:20px}
+  .shop-section .shop-intro{font-size:14px;color:var(--muted);margin:0 0 16px;padding-bottom:16px;border-bottom:1px solid var(--oat)}
+  a.cart-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;color:var(--white);background:var(--ube-700);padding:12px 22px;border-radius:1584px;margin-top:16px;transition:all .15s}
+  a.cart-btn:hover{transform:rotateZ(-8deg) translateY(-4px);box-shadow:var(--shadow-hard)}
+  a.cart-btn svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+  .affiliate-note{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:var(--muted);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em;border:1px dashed var(--oat);padding:5px 14px;border-radius:1584px;margin:20px 0 0}
+  .affiliate-note::before{content:"★";color:var(--ube-700);font-size:10px}
+  .pull{font-family:var(--font);font-size:22px;font-weight:500;line-height:1.4;color:var(--charcoal);margin:32px auto;padding:20px 28px;border-left:4px solid var(--ube-400);background:rgba(167,139,250,.06);border-radius:0 12px 12px 0;max-width:780px}
+  footer{margin:80px 0 0;padding:40px 48px;border-radius:40px;border:1px dashed var(--oat);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  footer .f-brand{font-family:var(--mono);font-size:13px;font-weight:700}
+  footer p{font-size:13px;color:var(--muted);font-family:var(--mono);margin:0}
+  @media(max-width:767px){nav{padding:0 20px}.wrap{padding:0 20px 64px}h2{font-size:26px}.compound-grid{grid-template-columns:1fr}.avoid-grid{grid-template-columns:1fr}.shop-item{grid-template-columns:1fr;gap:10px}footer{padding:28px 24px;flex-direction:column}}
+</style>
+</head>
+<body>
+<div id="pb" style="position:fixed;top:0;left:0;width:0;height:3px;background:var(--ube-600);z-index:999;transition:width .08s linear;pointer-events:none"></div>
+
+<nav>
+  <a class="nav-logo" href="index.html">visual-guides</a>
+  <div class="nav-links">
+    <a href="cotton-quality-guide.html">Cotton</a>
+    <a href="gut-drink-guide.html">Gut Shake</a>
+    <a href="diy-running-nutrition-guide.html">Running</a>
+    <a href="sleep-stack-guide.html" style="background:rgba(167,139,250,.15);color:var(--ube-700)">Sleep</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">Evidence-based · Sleep · Optimization</div>
+  <h1>The Sleep Stack</h1>
+  <p class="sub">Four compounds. One protocol. Meaningfully better sleep — without melatonin dependency or morning grogginess.</p>
+</header>
+
+<p class="lede">Most sleep supplements either don't work or work by knocking you out — not the same thing as quality sleep. This stack is built around compounds with solid mechanistic evidence: they support the pathways that produce deep, restorative sleep rather than sedating you into it. It's the protocol popularized by Andrew Huberman and validated across several sleep researchers' work, broken down so you actually understand what you're taking and why.</p>
+
+<div class="pull">"The goal isn't to fall asleep faster. It's to spend more time in the deep and REM stages that actually do the repair work."</div>
+
+<h2><span class="num">01</span> At a Glance</h2>
+<p>What the stack costs, what it targets, and how long before you'll notice a difference.</p>
+
+<div class="grid">
+  <div class="card">
+    <h4>Core compounds</h4>
+    <span class="stat">4</span>
+    <p>Magnesium glycinate, apigenin, L-theanine, and glycine.</p>
+  </div>
+  <div class="card">
+    <h4>Monthly cost</h4>
+    <span class="stat">~$18</span>
+    <p>Full stack, buying mid-tier brands with reasonable dosing.</p>
+  </div>
+  <div class="card">
+    <h4>Time to notice effect</h4>
+    <span class="stat">3–7 days</span>
+    <p>Most people report noticeably deeper sleep within a week.</p>
+  </div>
+  <div class="card">
+    <h4>Melatonin in this stack</h4>
+    <span class="stat">0 mg</span>
+    <p>Deliberately excluded. Here's why in Section 05.</p>
+  </div>
+</div>
+
+<h2><span class="num">02</span> The Core Four</h2>
+<p>These are the compounds with the strongest evidence-to-cost ratio. Take all four together, 30–60 minutes before bed.</p>
+
+<div class="compound-grid">
+
+  <div class="compound">
+    <span class="compound-num">Core 1 of 4</span>
+    <h3>Magnesium Glycinate</h3>
+    <span class="dose">300–400 mg</span>
+    <p>Magnesium is a cofactor for over 300 enzymatic reactions, including those that regulate the nervous system's transition to rest. The glycinate form (bound to glycine, an amino acid) is gentler on the gut than magnesium oxide or citrate and crosses the blood-brain barrier more effectively. It directly reduces cortisol activity and supports GABA — the primary inhibitory neurotransmitter that calms neural firing.</p>
+    <span class="timing-tag">🕙 30–60 min before bed</span>
+  </div>
+
+  <div class="compound">
+    <span class="compound-num">Core 2 of 4</span>
+    <h3>Apigenin</h3>
+    <span class="dose">50 mg</span>
+    <p>A flavonoid found in chamomile, apigenin binds to GABA-A receptors — the same receptor family targeted by benzodiazepines, but with much lower potency and no dependency risk. It promotes anxiolysis (a quiet, settled feeling) without sedation. At 50 mg it has a measurable effect on sleep onset latency in studies. Note: if you're trying to conceive, discuss with your doctor first — there's a theoretical estrogen-modulating effect at high doses.</p>
+    <span class="timing-tag">🕙 30–60 min before bed</span>
+  </div>
+
+  <div class="compound">
+    <span class="compound-num">Core 3 of 4</span>
+    <h3>L-Theanine</h3>
+    <span class="dose">100–200 mg</span>
+    <p>An amino acid in green tea that increases alpha brainwave activity — the relaxed-but-alert state associated with meditation. At sleep doses it shifts the brain toward a calmer pattern without inducing drowsiness during the day. It pairs synergistically with magnesium glycinate: magnesium addresses the body's stress response, theanine addresses the mind's. People who wake in the night often find this the most impactful compound.</p>
+    <span class="timing-tag">🕙 30–60 min before bed</span>
+  </div>
+
+  <div class="compound">
+    <span class="compound-num">Core 4 of 4</span>
+    <h3>Glycine</h3>
+    <span class="dose">2,000 mg (2 g)</span>
+    <p>An inhibitory amino acid that lowers core body temperature — one of the key physiological signals that triggers deep sleep onset. Studies show 3g of glycine taken before bed reduces fatigue the following day and increases slow-wave (deep) sleep time. It's inexpensive in bulk powder form, mildly sweet, and mixes well into a glass of water. The magnesium glycinate above also contributes glycine, but this dose goes further.</p>
+    <span class="timing-tag">🕙 30–60 min before bed · Mix in water</span>
+  </div>
+
+</div>
+
+<h2><span class="num">03</span> Timing Protocol</h2>
+<p>Sequence matters. The stack works best within a broader evening wind-down — the compounds amplify habits, not replace them.</p>
+
+<div class="timeline">
+  <h4>Evening protocol · Working backwards from bedtime</h4>
+  <div class="tl-track">
+    <div class="tl-item faint">
+      <span class="tl-time">8–10 hrs before bed</span>
+      <b>Last caffeine</b>
+      <p>Caffeine's half-life is 5–6 hours. A 3pm coffee is still 50% active at 9pm. Cutting earlier is the single highest-leverage sleep lever most people ignore.</p>
+    </div>
+    <div class="tl-item faint">
+      <span class="tl-time">1–2 hrs before bed</span>
+      <b>Dim the lights</b>
+      <p>Bright light suppresses melatonin production. Shift to lamps, avoid overhead lighting, and get off blue-light screens or use blue-light blocking glasses.</p>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">60 min before bed</span>
+      <b>Take the stack</b>
+      <p>Magnesium glycinate (300–400 mg) + Apigenin (50 mg) + L-Theanine (100–200 mg) + Glycine (2 g dissolved in water). All together, once daily.</p>
+    </div>
+    <div class="tl-item light">
+      <span class="tl-time">30 min before bed</span>
+      <b>Lower your body temperature</b>
+      <p>A cool (not cold) shower, or simply turning the thermostat down. Core body temp needs to drop ~1–2°F to initiate sleep — you're accelerating that process.</p>
+    </div>
+    <div class="tl-item light">
+      <span class="tl-time">Bedtime</span>
+      <b>Dark, cool, quiet</b>
+      <p>The compounds are active. The environment needs to meet them halfway. 65–68°F (18–20°C), blackout dark, and quiet enough to stay asleep.</p>
+    </div>
+  </div>
+</div>
+
+<h2><span class="num">04</span> Optional Additions</h2>
+<p>These compounds have good evidence but lower confidence or more individual variability. Add one at a time, not all at once.</p>
+
+<div class="compound-grid">
+
+  <div class="compound opt">
+    <span class="compound-num">Optional</span>
+    <h3>Ashwagandha (KSM-66)</h3>
+    <span class="dose">300–600 mg</span>
+    <p>An adaptogen that measurably lowers cortisol over time. KSM-66 is the most studied extract — it works on a weekly/monthly timescale rather than acutely, so it's less "take tonight" and more "take consistently for 8 weeks." Good for people whose main problem is stress-driven wakefulness or racing thoughts at bedtime. Cycle off every 2–3 months.</p>
+    <span class="timing-tag">🕙 With dinner or at bedtime · Cycle 8 weeks on / 4 weeks off</span>
+  </div>
+
+  <div class="compound opt">
+    <span class="compound-num">Optional</span>
+    <h3>Melatonin (micro-dose)</h3>
+    <span class="dose">0.3 mg — not 3–10 mg</span>
+    <p>Most melatonin sold in the US is 3–10 mg — that's 10–30× the physiological dose your brain actually produces. At 0.3 mg it's a timing signal (tells your brain it's night); at 3+ mg it's a pharmacological dose that causes grogginess and disrupts natural production over time. If you use melatonin, use a 0.3 mg product. Useful for jet lag and schedule shifts, less useful for ongoing nightly use.</p>
+    <span class="timing-tag">🕙 30 min before target bedtime · Jet lag / travel only</span>
+  </div>
+
+</div>
+
+<h2><span class="num">05</span> What to Cut</h2>
+<p>No stack overcomes bad inputs. These are the most common things that neutralize the benefit.</p>
+
+<div class="avoid-grid">
+
+  <div class="avoid-card">
+    <span class="avoid-icon">☕</span>
+    <h4>Late caffeine</h4>
+    <p>Caffeine blocks adenosine receptors — the buildup of adenosine is what creates sleep pressure. Even if you "fall asleep fine," caffeine reduces deep sleep duration measurably. Cut off by 1–2pm for most people.</p>
+    <span class="avoid-rule">Cutoff: 1–2pm</span>
+  </div>
+
+  <div class="avoid-card">
+    <span class="avoid-icon">🍷</span>
+    <h4>Alcohol</h4>
+    <p>Alcohol sedates but doesn't produce sleep — it suppresses REM dramatically. You'll fall asleep faster but wake fragmented in the second half of the night as the alcohol is metabolized. It's the biggest silent killer of sleep quality.</p>
+    <span class="avoid-rule">None within 3 hrs of bed</span>
+  </div>
+
+  <div class="avoid-card">
+    <span class="avoid-icon">📱</span>
+    <h4>Bright screens after 9pm</h4>
+    <p>Blue and green wavelength light (~480 nm) suppresses melanopsin-containing cells in the retina, which signal the SCN to pause melatonin production. Even at low brightness, ceiling lights and phone screens are bright enough to matter.</p>
+    <span class="avoid-rule">Dim / warm-only after sunset</span>
+  </div>
+
+  <div class="avoid-card">
+    <span class="avoid-icon">🌡️</span>
+    <h4>Warm bedroom</h4>
+    <p>Core body temperature needs to fall to initiate and maintain deep sleep. A warm room fights this directly. The sweet spot is 65–68°F (18–20°C). If you share a bed, a cooling mattress pad on your side is a legitimate tool.</p>
+    <span class="avoid-rule">Target: 65–68°F (18–20°C)</span>
+  </div>
+
+  <div class="avoid-card">
+    <span class="avoid-icon">🍔</span>
+    <h4>Large meals within 2 hrs of bed</h4>
+    <p>Digestion raises core body temperature and keeps the digestive system active. This doesn't prevent sleep onset so much as it reduces deep sleep proportion and can cause acid reflux that fragments the night.</p>
+    <span class="avoid-rule">Last meal: 2–3 hrs before bed</span>
+  </div>
+
+  <div class="avoid-card">
+    <span class="avoid-icon">⏰</span>
+    <h4>Inconsistent sleep schedule</h4>
+    <p>Your circadian clock is the master regulator — all of the above compounds are modulating a signal that the clock interprets. Going to bed 2 hours later on weekends introduces a kind of social jet lag that takes days to recover from. Consistency is more powerful than any supplement.</p>
+    <span class="avoid-rule">Same bedtime ± 30 min 7 days/week</span>
+  </div>
+
+</div>
+
+<h2><span class="num">06</span> Sleep Environment</h2>
+<p>The stack works best when the environment cooperates. These are the highest-leverage physical changes.</p>
+
+<div class="env-grid">
+
+  <div class="env-card">
+    <span class="env-icon">🌑</span>
+    <h4>Total darkness</h4>
+    <p>Even small amounts of light through closed eyelids (streetlight, standby LEDs, charging cables) have been shown to elevate cortisol and fragment sleep architecture. Blackout curtains or a sleep mask.</p>
+    <span class="env-tag">High impact</span>
+  </div>
+
+  <div class="env-card">
+    <span class="env-icon">❄️</span>
+    <h4>Cool temperature</h4>
+    <p>Set the thermostat to 65–68°F before bed. If your partner runs hot or cold differently, a dual-zone mattress pad (Eight Sleep, BedJet) solves this without nightly negotiation.</p>
+    <span class="env-tag">High impact</span>
+  </div>
+
+  <div class="env-card">
+    <span class="env-icon">🔇</span>
+    <h4>Sound masking</h4>
+    <p>Brown or pink noise (more natural than white noise) masks intermittent sounds — the wake trigger is usually the change in sound level, not the volume itself. A fan often does the job.</p>
+    <span class="env-tag">Medium impact</span>
+  </div>
+
+  <div class="env-card">
+    <span class="env-icon">📵</span>
+    <h4>Phone out of bedroom</h4>
+    <p>The cognitive pull of a nearby phone — even face-down — has been shown to modestly impair sleep quality and next-day focus. Charge it outside the room; use a separate alarm clock.</p>
+    <span class="env-tag">Medium impact</span>
+  </div>
+
+</div>
+
+<div class="callout good">
+  <strong>Morning anchor</strong>
+  Get 2–10 minutes of direct outdoor sunlight within 30–60 minutes of waking. This resets the circadian clock's start time, making it easier to feel sleepy at your target bedtime. It's the other half of the light protocol.
+</div>
+
+<h2><span class="num">07</span> Shopping List</h2>
+<p>The four core compounds and a few optional additions, with affiliate links that support this project.</p>
+
+<div class="shop-section">
+  <h3>Core Stack</h3>
+  <p class="shop-intro">Take all four together, 30–60 minutes before bed. This is the complete evidence-based protocol.</p>
+
+  <div class="shop-item">
+    <div>
+      <span class="shop-dose">300–400 mg · Nightly</span>
+      <h4>Magnesium Glycinate</h4>
+      <p class="shop-why">Doctor's Best High Absorption Magnesium — the glycinate form specifically, not oxide. 200 tablets per bottle lasts 3+ months.</p>
+    </div>
+    <a class="shop-link" href="https://www.amazon.com/dp/B000BD0RT0?tag=coactlabcom-20" target="_blank" rel="noopener">View →</a>
+  </div>
+
+  <div class="shop-item">
+    <div>
+      <span class="shop-dose">50 mg · Nightly</span>
+      <h4>Apigenin</h4>
+      <p class="shop-why">Swanson Apigenin 50mg — standardized chamomile extract. Hard to find at this dose; Swanson has consistent quality control.</p>
+    </div>
+    <a class="shop-link" href="https://www.amazon.com/dp/B07JVW9XRQ?tag=coactlabcom-20" target="_blank" rel="noopener">View →</a>
+  </div>
+
+  <div class="shop-item">
+    <div>
+      <span class="shop-dose">200 mg · Nightly</span>
+      <h4>L-Theanine</h4>
+      <p class="shop-why">NOW Foods L-Theanine 200mg — double-strength capsules, well-sourced and third-party tested. Start at 100mg if you're sensitive.</p>
+    </div>
+    <a class="shop-link" href="https://www.amazon.com/dp/B0013OQGO6?tag=coactlabcom-20" target="_blank" rel="noopener">View →</a>
+  </div>
+
+  <div class="shop-item">
+    <div>
+      <span class="shop-dose">2–3 g · Nightly in water</span>
+      <h4>Glycine Powder</h4>
+      <p class="shop-why">Bulk Supplements Glycine — buy powder, not capsules. At 2–3g/night a capsule form is impractical. Mild sweetness, dissolves easily.</p>
+    </div>
+    <a class="shop-link" href="https://www.amazon.com/dp/B00EQP7FK6?tag=coactlabcom-20" target="_blank" rel="noopener">View →</a>
+  </div>
+
+  <a class="cart-btn" href="https://www.amazon.com/gp/aws/cart/add.html?AssociateTag=coactlabcom-20&tag=coactlabcom-20&ASIN.1=B000BD0RT0&Quantity.1=1&ASIN.2=B07JVW9XRQ&Quantity.2=1&ASIN.3=B0013OQGO6&Quantity.3=1&ASIN.4=B00EQP7FK6&Quantity.4=1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM7.16 14.26l.04-.12.94-1.7h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 20.04 4H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7.42c-.14 0-.25-.11-.26-.25z"/></svg> Add Core Stack to Cart</a>
+</div>
+
+<div class="shop-section">
+  <h3>Optional Additions</h3>
+  <p class="shop-intro">Add one at a time. Ashwagandha is best as a multi-week commitment; melatonin is for travel only.</p>
+
+  <div class="shop-item">
+    <div>
+      <span class="shop-dose">300–600 mg · With dinner · Cycle 8 wks on/off</span>
+      <h4>Ashwagandha KSM-66</h4>
+      <p class="shop-why">Nutricost Ashwagandha with KSM-66 extract — the most-studied ashwagandha form. For cortisol reduction over time, not acute sleep onset.</p>
+    </div>
+    <a class="shop-link" href="https://www.amazon.com/dp/B07QGT3Q8L?tag=coactlabcom-20" target="_blank" rel="noopener">View →</a>
+  </div>
+
+  <div class="shop-item">
+    <div>
+      <span class="shop-dose">0.3 mg · Travel and jet lag only</span>
+      <h4>Melatonin 0.3 mg</h4>
+      <p class="shop-why">Life Extension Melatonin 0.3mg — the physiological dose, not the pharmacological one. If you can only find 1mg, cut the tablet in thirds.</p>
+    </div>
+    <a class="shop-link" href="https://www.amazon.com/dp/B00EALAUSK?tag=coactlabcom-20" target="_blank" rel="noopener">View →</a>
+  </div>
+
+  <a class="cart-btn" href="https://www.amazon.com/gp/aws/cart/add.html?AssociateTag=coactlabcom-20&tag=coactlabcom-20&ASIN.1=B07QGT3Q8L&Quantity.1=1&ASIN.2=B00EALAUSK&Quantity.2=1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM7.16 14.26l.04-.12.94-1.7h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 20.04 4H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7.42c-.14 0-.25-.11-.26-.25z"/></svg> Add Optionals to Cart</a>
+</div>
+
+<p class="affiliate-note">Affiliate links — support this site at no extra cost to you</p>
+
+<div class="callout warn">
+  <strong>This is not medical advice</strong>
+  These compounds are generally well-tolerated but interact with medications and aren't appropriate for everyone. If you're pregnant, breastfeeding, on SSRIs or anti-anxiety medication, or dealing with a sleep disorder, talk to your doctor before starting. Apigenin in particular has estrogen-modulating properties at high doses — mentioned above, worth knowing.
+</div>
+
+<h2><span class="num">08</span> The Takeaway</h2>
+<p>The sleep stack isn't magic, and it isn't a substitute for basic sleep hygiene — consistent bedtime, cool room, dark space, no alcohol close to bed. What it does is lower the floor. For most people, the compounds smooth out the rougher nights, reduce middle-of-night wakefulness, and slightly extend time in slow-wave and REM. At ~$18/month for the core four, the cost-benefit is hard to argue with.</p>
+
+<p>Start with just magnesium glycinate for a week if you want to test compounds individually. Most people notice glycine's effect quickly (it's hard not to when you're sleeping more deeply). The full protocol takes about two weeks to stabilize.</p>
+
+<div class="pull">"The supplements don't create sleep. They remove the obstacles. Your brain already knows how to do the rest."</div>
+
+<footer>
+  <span class="f-brand">visual-guides / sleep-stack</span>
+  <p>Educational guide — not medical advice. Consult a physician for personal health decisions. Made with care by a human + Claude.</p>
+</footer>
+
+</div>
+<script>(function(){var pb=document.getElementById('pb');window.addEventListener('scroll',function(){var s=document.documentElement,t=s.scrollTop,h=s.scrollHeight-s.clientHeight;pb.style.width=(h>0?t/h*100:0)+'%';},{passive:true});})();</script>
+</body>
+</html>

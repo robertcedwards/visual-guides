@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Gut Shake — A Visual Guide to the Anti-Inflammatory Fiber & Probiotic Drink</title>
+<title>The Gut Shake — Anti-Inflammatory Fiber & Probiotic Drink Guide</title>
+<meta name="description" content="A two-ingredient fermented drink that outperformed omega-3 on inflammation markers. Study breakdown, three recipes, and a full 18-fiber shopping list.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://robertcedwards.github.io/visual-guides/gut-drink-guide.html">
+<meta property="og:title" content="The Gut Shake — Anti-Inflammatory Fiber & Probiotic Drink Guide">
+<meta property="og:description" content="A two-ingredient fermented drink that outperformed omega-3 on inflammation markers. Study breakdown, three recipes, and a full 18-fiber shopping list.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Gut Shake — Anti-Inflammatory Fiber & Probiotic Drink Guide">
+<meta name="twitter:description" content="A two-ingredient fermented drink that outperformed omega-3 on inflammation markers. Study breakdown, three recipes, and a full 18-fiber shopping list.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23000'/><text x='16' y='22' text-anchor='middle' font-family='monospace' font-size='13' font-weight='700' fill='%23faf9f7'>vg</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -38,6 +47,7 @@
     --shadow:     var(--shadow-clay);
   }
   *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
   html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
 
   /* NAV */
@@ -202,7 +212,8 @@
   }
   .shop-item a.buy-btn:hover{transform:rotateZ(-8deg) translateY(-4px);box-shadow:var(--shadow-hard)}
 
-  .affiliate-note{font-size:12px;color:var(--muted);margin:16px 0 0;text-align:center;font-family:var(--mono)}
+  .affiliate-note{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:var(--muted);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em;border:1px dashed var(--oat);padding:5px 14px;border-radius:1584px;margin:20px 0 0}
+  .affiliate-note::before{content:"★";color:var(--matcha-600);font-size:10px}
 
   a.cart-btn{
     display:inline-flex;align-items:center;gap:8px;
@@ -250,12 +261,14 @@
 </style>
 </head>
 <body>
+<div id="pb" style="position:fixed;top:0;left:0;width:0;height:3px;background:var(--matcha-600);z-index:999;transition:width .08s linear;pointer-events:none"></div>
 <nav>
   <a class="nav-logo" href="index.html">visual-guides</a>
   <div class="nav-links">
     <a href="cotton-quality-guide.html">Cotton</a>
     <a href="gut-drink-guide.html" style="background:rgba(132,231,165,.2);color:var(--matcha-800)">Gut Shake</a>
     <a href="diy-running-nutrition-guide.html">Running</a>
+    <a href="sleep-stack-guide.html">Sleep</a>
   </div>
 </nav>
 <div class="wrap">
@@ -753,7 +766,7 @@
   The study used a proprietary blend. The point isn't to buy 18 products — it's that <em>diversity of fiber types</em> matters more than any single one. Start with the 4-fiber recipe in Section 04 and add from this reference list as you get comfortable. Even 5–6 different fiber types puts you well ahead of most people's intake.
 </div>
 
-<p class="affiliate-note">Links above are Amazon affiliate links — they support this project at no extra cost to you.</p>
+<p class="affiliate-note">Affiliate links — support this site at no extra cost to you</p>
 
 <h2><span class="num">09</span> The Takeaway</h2>
 <p>The real lesson of the study isn't that kefir is magic or that fiber blends are magic. It's that <strong>inflammation is usually driven by systems, not single nutrients</strong>. When you support the system that regulates your immune signaling, gut barrier, and metabolism — feed it diverse fiber, populate it with diverse microbes — the body does an enormous amount of work for you. Feeding your gut ecosystem can sometimes do more for chronic inflammation than trying to suppress it from above.</p>
@@ -766,5 +779,6 @@
 </footer>
 
 </div>
+<script>(function(){var pb=document.getElementById('pb');window.addEventListener('scroll',function(){var s=document.documentElement,t=s.scrollTop,h=s.scrollHeight-s.clientHeight;pb.style.width=(h>0?t/h*100:0)+'%';},{passive:true});})();</script>
 </body>
 </html>

@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DIY Running Nutrition — A Visual Guide to Homemade Energy Bites & Gels</title>
+<meta name="description" content="One week of store-bought gels costs $50. The same carbs, made at home, cost $9. Here's exactly how — two recipes, full ingredient breakdown, and cost comparison.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://robertcedwards.github.io/visual-guides/diy-running-nutrition-guide.html">
+<meta property="og:title" content="DIY Running Nutrition — Homemade Energy Bites & Gels">
+<meta property="og:description" content="One week of store-bought gels costs $50. The same carbs, made at home, cost $9. Two recipes, full ingredient breakdown, and cost comparison.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DIY Running Nutrition — Homemade Energy Bites & Gels">
+<meta name="twitter:description" content="One week of store-bought gels costs $50. The same carbs, made at home, cost $9. Two recipes, full ingredient breakdown, and cost comparison.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23000'/><text x='16' y='22' text-anchor='middle' font-family='monospace' font-size='13' font-weight='700' fill='%23faf9f7'>vg</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -21,6 +30,7 @@
     --berry:#43089f;
   }
   *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
   html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
   nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--oat);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px}
   .nav-logo{font-family:var(--mono);font-size:14px;font-weight:700;text-decoration:none;color:var(--black)}
@@ -115,6 +125,7 @@
 </style>
 </head>
 <body>
+<div id="pb" style="position:fixed;top:0;left:0;width:0;height:3px;background:var(--slushie-500);z-index:999;transition:width .08s linear;pointer-events:none"></div>
 
 <nav>
   <a class="nav-logo" href="index.html">visual-guides</a>
@@ -122,6 +133,7 @@
     <a href="cotton-quality-guide.html">Cotton</a>
     <a href="gut-drink-guide.html">Gut Shake</a>
     <a href="diy-running-nutrition-guide.html" style="background:rgba(59,211,253,.15);color:var(--slushie-800)">Running</a>
+    <a href="sleep-stack-guide.html">Sleep</a>
   </div>
 </nav>
 
@@ -340,5 +352,6 @@
 </footer>
 
 </div>
+<script>(function(){var pb=document.getElementById('pb');window.addEventListener('scroll',function(){var s=document.documentElement,t=s.scrollTop,h=s.scrollHeight-s.clientHeight;pb.style.width=(h>0?t/h*100:0)+'%';},{passive:true});})();</script>
 </body>
 </html>
