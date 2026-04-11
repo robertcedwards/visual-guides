@@ -302,6 +302,70 @@
   .ramp-step:nth-child(3){background:#dfe8c2}
   .ramp-step:nth-child(4){background:#cde0a9}
 
+  /* Shopping list */
+  .shop-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:18px;
+    margin:24px 0;
+  }
+  .shop-item{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:22px 24px;
+    box-shadow:var(--shadow);
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .shop-item .shop-tag{
+    display:inline-block;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    padding:2px 8px;border-radius:99px;
+    background:#e4efda;color:var(--accent-deep);
+    width:fit-content;
+  }
+  .shop-item .shop-tag.core{background:#e4efda;color:var(--accent-deep)}
+  .shop-item .shop-tag.fiber{background:#f1ecd9;color:#7a6520}
+  .shop-item .shop-tag.boost{background:#e8ddf0;color:#5b3a7a}
+  .shop-item h4{
+    margin:4px 0 0;
+    font-size:17px;
+  }
+  .shop-item .brand{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:13px;color:var(--muted);
+    margin:0;
+  }
+  .shop-item .why{
+    font-size:14px;color:var(--muted);
+    margin:0;
+  }
+  .shop-item a.buy-btn{
+    display:inline-block;
+    margin-top:auto;
+    padding:8px 16px;
+    background:var(--accent);
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.04em;
+    text-align:center;
+    transition:background .15s ease;
+    width:fit-content;
+  }
+  .shop-item a.buy-btn:hover{background:var(--accent-deep)}
+  .affiliate-note{
+    font-size:12px;color:var(--muted);font-style:italic;
+    margin:18px 0 0;
+    text-align:center;
+  }
+
   footer{
     margin-top:80px;
     padding-top:28px;
@@ -575,7 +639,78 @@
   The fiber blend in the trial was supplied by Chuckling Goat Limited, who also funded the study — so the results are not unbiased. The mechanisms (fiber diversity → butyrate → lower IL-6) are well-established in the wider literature, which is why a home replica with generic fibers is reasonable. But treat the "won by a lot" framing with a grain of salt.
 </div>
 
-<h2><span class="num">07</span> The Takeaway</h2>
+<h2><span class="num">07</span> Shopping List</h2>
+<p>Everything you need to make all three versions of the shake. Organic options where available. Click through to Amazon to check current prices.</p>
+
+<h3>The Foundation</h3>
+<div class="shop-grid">
+  <div class="shop-item">
+    <span class="shop-tag core">Core</span>
+    <h4>Live Milk Kefir Grains</h4>
+    <p class="brand">Cultures for Health — Heirloom Starter</p>
+    <p class="why">Reusable live grains you culture at home for an endless supply of fresh kefir. One purchase, unlimited batches.</p>
+    <a class="buy-btn" href="https://www.amazon.com/dp/B002ZI1J50?tag=coactlabcom-20" target="_blank" rel="noopener">View on Amazon</a>
+  </div>
+  <div class="shop-item">
+    <span class="shop-tag core">Core</span>
+    <h4>Organic Acacia Fiber</h4>
+    <p class="brand">Organic Senegal — Plant-Based Prebiotic Superfood</p>
+    <p class="why">Gentle, low-gas prebiotic. The safest starting fiber for sensitive guts. USDA Organic.</p>
+    <a class="buy-btn" href="https://www.amazon.com/dp/B09NQVBGQK?tag=coactlabcom-20" target="_blank" rel="noopener">View on Amazon</a>
+  </div>
+</div>
+
+<h3>The Fiber Blend</h3>
+<div class="shop-grid">
+  <div class="shop-item">
+    <span class="shop-tag fiber">Fiber</span>
+    <h4>Organic Inulin Powder</h4>
+    <p class="brand">Micro Ingredients — 2.2 lbs, from Jerusalem Artichoke</p>
+    <p class="why">Classic bifidogenic prebiotic. Water-soluble, dissolves clear. USDA Organic, no fillers.</p>
+    <a class="buy-btn" href="https://www.amazon.com/dp/B074WKCPS4?tag=coactlabcom-20" target="_blank" rel="noopener">View on Amazon</a>
+  </div>
+  <div class="shop-item">
+    <span class="shop-tag fiber">Fiber</span>
+    <h4>Organic PHGG + Acacia Blend</h4>
+    <p class="brand">Essential Stacks — Organic Sunfiber Prebiotic</p>
+    <p class="why">Partially hydrolyzed guar gum plus acacia. Low FODMAP, slow-fermenting, very gentle. Organic.</p>
+    <a class="buy-btn" href="https://www.amazon.com/dp/B07RQC1VBX?tag=coactlabcom-20" target="_blank" rel="noopener">View on Amazon</a>
+  </div>
+  <div class="shop-item">
+    <span class="shop-tag fiber">Fiber</span>
+    <h4>Organic Potato Starch (Resistant Starch)</h4>
+    <p class="brand">Anthony's — 2 lbs, Unmodified, Gluten-Free</p>
+    <p class="why">Top butyrate producer when used raw. Unmodified = retains resistant starch properties. Organic, Non-GMO.</p>
+    <a class="buy-btn" href="https://www.amazon.com/dp/B06XH6SZVT?tag=coactlabcom-20" target="_blank" rel="noopener">View on Amazon</a>
+  </div>
+  <div class="shop-item">
+    <span class="shop-tag fiber">Fiber</span>
+    <h4>Organic Psyllium Husk Powder</h4>
+    <p class="brand">Viva Naturals — 24 oz, Finely Ground</p>
+    <p class="why">Bulking fiber for stool regularity. Finely ground blends smoothly. USDA Organic, Non-GMO Project Verified.</p>
+    <a class="buy-btn" href="https://www.amazon.com/dp/B011QGTRG4?tag=coactlabcom-20" target="_blank" rel="noopener">View on Amazon</a>
+  </div>
+</div>
+
+<h3>Polyphenol Boosters</h3>
+<div class="shop-grid">
+  <div class="shop-item">
+    <span class="shop-tag boost">Boost</span>
+    <h4>Organic Ground Flaxseed</h4>
+    <p class="brand">Viva Naturals — 15 oz, Cold-Milled</p>
+    <p class="why">Omega-3 + lignans + fiber in one. Cold-milled to preserve nutrients. Add 1 tbsp to any version of the shake.</p>
+    <a class="buy-btn" href="https://www.amazon.com/dp/B00QFR9X8W?tag=coactlabcom-20" target="_blank" rel="noopener">View on Amazon</a>
+  </div>
+</div>
+
+<div class="callout good">
+  <strong>Minimum viable cart</strong>
+  If you're just getting started and don't want to buy everything at once, the two essentials are: <strong>kefir grains</strong> (or a bottle of plain kefir from your grocery store) and <strong>one gentle fiber</strong> — either the acacia or the PHGG + acacia blend. That's enough to start with the Starter recipe and build from there.
+</div>
+
+<p class="affiliate-note">Links above are Amazon affiliate links — they support this project at no extra cost to you.</p>
+
+<h2><span class="num">08</span> The Takeaway</h2>
 <p>The real lesson of the study isn't that kefir is magic or that fiber blends are magic. It's that <strong>inflammation is usually driven by systems, not single nutrients</strong>. When you support the system that regulates your immune signaling, gut barrier, and metabolism — feed it diverse fiber, populate it with diverse microbes — the body does an enormous amount of work for you. Feeding your gut ecosystem can sometimes do more for chronic inflammation than trying to suppress it from above.</p>
 
 <div class="pull">"Inflammation is often driven by systems, not single nutrients. Feed the system, and the body makes its own anti-inflammatory signals."</div>
