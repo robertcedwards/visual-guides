@@ -4,127 +4,309 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Visual Guides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#f5f2ea;
-    --ink:#1e1a17;
-    --muted:#6b6359;
-    --accent:#b8541d;
-    --card:#fffaf2;
-    --line:#d8cfc1;
-    --shadow:0 2px 4px rgba(0,0,0,.04), 0 12px 32px rgba(30,26,23,.07);
+  :root {
+    --cream:       #faf9f7;
+    --black:       #000000;
+    --white:       #ffffff;
+    --oat:         #dad4c8;
+    --oat-light:   #eee9df;
+    --muted:       #9f9b93;
+    --charcoal:    #55534e;
+    --matcha-300:  #84e7a5;
+    --matcha-600:  #078a52;
+    --matcha-800:  #02492a;
+    --slushie-500: #3bd3fd;
+    --slushie-800: #0089ad;
+    --lemon-400:   #f8cc65;
+    --lemon-500:   #fbbd41;
+    --lemon-700:   #d08a11;
+    --ube-300:     #c1b0ff;
+    --ube-800:     #43089f;
+    --pom-400:     #fc7981;
+    --shadow-clay: rgba(0,0,0,0.1) 0px 1px 1px, rgba(0,0,0,0.04) 0px -1px 1px inset, rgba(0,0,0,0.05) 0px -0.5px 1px;
+    --shadow-hard: rgb(0,0,0) -7px 7px;
+    --font:        'Plus Jakarta Sans', Arial, sans-serif;
+    --mono:        'Space Mono', monospace;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{background:var(--bg);color:var(--ink);font-family:Georgia,'Iowan Old Style',serif;line-height:1.6;min-height:100vh}
-
-  header{
-    text-align:center;
-    padding:80px 28px 56px;
-    background:radial-gradient(ellipse at top,rgba(184,84,29,.07),transparent 60%),var(--bg);
-  }
-  .eyebrow{
-    text-transform:uppercase;letter-spacing:.24em;font-size:12px;color:var(--accent);
-    font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;margin-bottom:14px;
-  }
-  header h1{font-size:56px;line-height:1.05;letter-spacing:-.025em;margin-bottom:16px}
-  header p{font-size:18px;color:var(--muted);max-width:560px;margin:0 auto;font-style:italic}
-
-  .guides{
-    max-width:920px;margin:0 auto;padding:24px 28px 96px;
-    display:grid;gap:24px;
-  }
-
-  a.guide-card{
-    display:grid;
-    grid-template-columns:1fr auto;
-    align-items:center;
-    gap:20px;
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:32px 36px;
-    text-decoration:none;
-    color:var(--ink);
-    box-shadow:var(--shadow);
-    transition:transform .15s ease, box-shadow .15s ease;
-  }
-  a.guide-card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 4px 8px rgba(0,0,0,.06), 0 16px 40px rgba(30,26,23,.10);
-  }
-  .guide-card .tag{
-    display:inline-block;
-    font-family:'Helvetica Neue',Arial,sans-serif;
-    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
-    padding:3px 10px;border-radius:99px;margin-bottom:8px;
-    color:#fff;
-  }
-  .tag.cotton{background:#b8541d}
-  .tag.gut{background:#5b8a3a}
-  .tag.running{background:#2e6b8a}
-
-  .guide-card h2{font-size:26px;line-height:1.2;margin-bottom:6px;letter-spacing:-.01em}
-  .guide-card p{font-size:15px;color:var(--muted);margin:0}
-  .guide-card .arrow{
-    font-size:28px;color:var(--accent);font-family:Arial;
-    opacity:.5;transition:opacity .15s ease;
-  }
-  a.guide-card:hover .arrow{opacity:1}
-
-  footer{
-    text-align:center;padding:28px;
-    border-top:1px solid var(--line);
-    font-size:13px;color:var(--muted);font-style:italic;
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--cream);
+    color: var(--black);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
   }
 
-  @media(max-width:640px){
-    header h1{font-size:38px}
-    a.guide-card{padding:24px 22px}
-    .guide-card h2{font-size:22px}
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--cream);
+    border-bottom: 1px solid var(--oat);
+    padding: 0 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .nav-logo {
+    font-family: var(--mono);
+    font-size: 14px; font-weight: 700;
+    letter-spacing: -0.02em;
+    text-decoration: none; color: var(--black);
+  }
+  .nav-links { display: flex; gap: 8px; align-items: center; }
+  .nav-links a {
+    font-size: 15px; font-weight: 500;
+    color: var(--charcoal); text-decoration: none;
+    padding: 6px 12px; border-radius: 1584px;
+    transition: background .15s;
+  }
+  .nav-links a:hover { background: var(--oat-light); color: var(--black); }
+
+  /* HERO */
+  .hero {
+    max-width: 900px; margin: 0 auto;
+    padding: 96px 40px 80px;
+    text-align: center;
+  }
+  .hero-label {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1.08px;
+    color: var(--muted);
+    border: 1px dashed var(--oat);
+    padding: 4px 14px; border-radius: 1584px;
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-size: clamp(48px, 7vw, 80px);
+    font-weight: 600;
+    line-height: 1.0;
+    letter-spacing: -3.2px;
+    font-feature-settings: "ss01","ss03","ss10","ss11","ss12";
+    margin-bottom: 20px;
+  }
+  .hero p {
+    font-size: 20px; font-weight: 400;
+    line-height: 1.4; color: var(--muted);
+    max-width: 520px; margin: 0 auto;
+  }
+
+  /* GUIDE CARDS */
+  .guides {
+    max-width: 900px; margin: 0 auto;
+    padding: 0 40px 120px;
+    display: grid; gap: 16px;
+  }
+  .guide-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 32px 36px;
+    border-radius: 24px;
+    border: 1px solid var(--oat);
+    background: var(--white);
+    text-decoration: none; color: var(--black);
+    box-shadow: var(--shadow-clay);
+    transition: box-shadow .15s;
+    position: relative; overflow: hidden;
+  }
+  .guide-card:hover { box-shadow: var(--shadow-clay), 0 8px 32px rgba(0,0,0,.08); }
+  .guide-card .swatch-bar {
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 4px; border-radius: 24px 24px 0 0;
+  }
+  .card-cotton  .swatch-bar { background: var(--lemon-500); }
+  .card-gut     .swatch-bar { background: var(--matcha-600); }
+  .card-running .swatch-bar { background: var(--slushie-800); }
+
+  .guide-card .card-label {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1.08px;
+    padding: 3px 10px; border-radius: 1584px;
+    margin-bottom: 10px;
+  }
+  .card-cotton  .card-label { background: #fff8e0; color: var(--lemon-700); }
+  .card-gut     .card-label { background: #e0f5eb; color: var(--matcha-600); }
+  .card-running .card-label { background: #e0f7ff; color: var(--slushie-800); }
+
+  .guide-card h2 {
+    font-size: 28px; font-weight: 600;
+    line-height: 1.1; letter-spacing: -0.64px;
+    font-feature-settings: "ss01","ss03","ss10","ss11","ss12";
+    margin-bottom: 8px;
+  }
+  .guide-card p {
+    font-size: 16px; color: var(--muted);
+    line-height: 1.5; max-width: 560px;
+  }
+  .arrow-btn {
+    flex-shrink: 0;
+    width: 44px; height: 44px;
+    border-radius: 1584px;
+    border: 1px solid var(--oat);
+    background: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; color: var(--black);
+    transition: background .15s, transform .2s, box-shadow .2s;
+    position: relative; overflow: hidden;
+  }
+  .guide-card:hover .arrow-btn {
+    background: var(--black);
+    color: var(--white);
+    transform: rotateZ(-8deg);
+    box-shadow: var(--shadow-hard);
+  }
+
+  /* SWATCH SECTIONS */
+  .swatch-section {
+    margin: 0 40px 16px;
+    border-radius: 40px;
+    padding: 64px 56px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap;
+  }
+  .swatch-matcha  { background: var(--matcha-800); color: var(--white); }
+  .swatch-lemon   { background: var(--lemon-400); color: var(--black); }
+  .swatch-slushie { background: var(--slushie-800); color: var(--white); }
+  .swatch-ube     { background: var(--ube-800); color: var(--white); }
+
+  .swatch-section .ss-text h3 {
+    font-size: 32px; font-weight: 600;
+    letter-spacing: -0.64px; line-height: 1.1;
+    font-feature-settings: "ss01","ss03","ss10","ss11","ss12";
+    margin-bottom: 8px;
+  }
+  .swatch-section .ss-text p { font-size: 16px; line-height: 1.5; opacity: .8; max-width: 400px; }
+  .swatch-section a.ss-btn {
+    flex-shrink: 0;
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 24px; border-radius: 1584px;
+    background: var(--white); color: var(--black);
+    font-size: 15px; font-weight: 600;
+    text-decoration: none;
+    box-shadow: var(--shadow-clay);
+    transition: transform .2s, box-shadow .2s;
+    white-space: nowrap;
+  }
+  .swatch-lemon a.ss-btn { background: var(--black); color: var(--white); }
+  .swatch-section a.ss-btn:hover {
+    transform: rotateZ(-8deg) translateY(-4px);
+    box-shadow: var(--shadow-hard);
+  }
+
+  /* FOOTER */
+  footer {
+    margin: 0 40px 40px;
+    padding: 40px 48px;
+    border-radius: 40px;
+    border: 1px dashed var(--oat);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+  }
+  footer .f-brand {
+    font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--black);
+  }
+  footer p { font-size: 13px; color: var(--muted); }
+
+  /* RESPONSIVE */
+  @media (max-width: 767px) {
+    nav { padding: 0 20px; }
+    .hero { padding: 64px 20px 48px; }
+    .hero h1 { letter-spacing: -1.5px; }
+    .guides { padding: 0 20px 80px; }
+    .guide-card { padding: 24px 22px; grid-template-columns: 1fr; }
+    .arrow-btn { display: none; }
+    .swatch-section { margin: 0 20px 12px; padding: 40px 28px; flex-direction: column; align-items: flex-start; }
+    footer { margin: 0 20px 20px; padding: 28px 24px; }
   }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="eyebrow">A Collection</div>
+<nav>
+  <a class="nav-logo" href="/">visual-guides</a>
+  <div class="nav-links">
+    <a href="cotton-quality-guide.html">Cotton</a>
+    <a href="gut-drink-guide.html">Gut Shake</a>
+    <a href="diy-running-nutrition-guide.html">Running</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <span class="hero-label">A growing collection</span>
   <h1>Visual Guides</h1>
   <p>Deep-dive breakdowns of topics worth understanding properly — designed to be read, not skimmed.</p>
-</header>
+</section>
 
 <div class="guides">
 
-  <a class="guide-card" href="cotton-quality-guide.html">
+  <a class="guide-card card-cotton" href="cotton-quality-guide.html">
+    <div class="swatch-bar"></div>
     <div>
-      <span class="tag cotton">Clothing</span>
+      <span class="card-label">Clothing</span>
       <h2>The Cotton Audit</h2>
-      <p>How to read a cotton garment from the molecular level up — fiber quality, weave, weight, construction, and what "premium basic" actually means.</p>
+      <p>How to read a cotton garment from the molecular level up — fiber grade, weave, weight, construction, and what "premium basic" actually means.</p>
     </div>
-    <div class="arrow">&rarr;</div>
+    <div class="arrow-btn">→</div>
   </a>
 
-  <a class="guide-card" href="gut-drink-guide.html">
+  <a class="guide-card card-gut" href="gut-drink-guide.html">
+    <div class="swatch-bar"></div>
     <div>
-      <span class="tag gut">Health</span>
+      <span class="card-label">Health</span>
       <h2>The Gut Shake</h2>
-      <p>A two-ingredient fermented drink that outperformed omega-3 on inflammation markers — the study breakdown plus three home recipes.</p>
+      <p>A two-ingredient fermented drink that outperformed omega-3 on inflammation markers — the study breakdown plus three home recipes and a full 18-fiber shopping list.</p>
     </div>
-    <div class="arrow">&rarr;</div>
+    <div class="arrow-btn">→</div>
   </a>
 
-  <a class="guide-card" href="diy-running-nutrition-guide.html">
+  <a class="guide-card card-running" href="diy-running-nutrition-guide.html">
+    <div class="swatch-bar"></div>
     <div>
-      <span class="tag running">Fitness</span>
+      <span class="card-label">Fitness</span>
       <h2>DIY Running Nutrition</h2>
       <p>How to fuel long runs with homemade gels, drinks, and whole-food options — cheaper, customizable, and without the mystery ingredients.</p>
     </div>
-    <div class="arrow">&rarr;</div>
+    <div class="arrow-btn">→</div>
   </a>
 
 </div>
 
+<div class="swatch-section swatch-matcha">
+  <div class="ss-text">
+    <h3>Built from the gut up.</h3>
+    <p>Fiber diversity, butyrate, and why feeding your microbiome beats suppressing inflammation from above.</p>
+  </div>
+  <a class="ss-btn" href="gut-drink-guide.html">Read the Gut Shake →</a>
+</div>
+
+<div class="swatch-section swatch-lemon">
+  <div class="ss-text">
+    <h3>100% cotton tells you nothing.</h3>
+    <p>Learn to read fiber grade, yarn count, knit structure, and construction — the eight signals that actually predict quality.</p>
+  </div>
+  <a class="ss-btn" href="cotton-quality-guide.html">Read the Cotton Audit →</a>
+</div>
+
+<div class="swatch-section swatch-slushie">
+  <div class="ss-text">
+    <h3>Skip the $4 gel packs.</h3>
+    <p>Real food works. Here's how to fuel 10+ miles with ingredients you already have — and what actually matters physiologically.</p>
+  </div>
+  <a class="ss-btn" href="diy-running-nutrition-guide.html">Read the Fuel Guide →</a>
+</div>
+
 <footer>
-  Educational summaries — not professional advice. Built with care by a human + Claude.
+  <span class="f-brand">visual-guides</span>
+  <p>Educational guides — not professional advice. Made with care by a human + Claude.</p>
 </footer>
 
 </body>

@@ -4,350 +4,127 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DIY Running Nutrition — A Visual Guide to Homemade Energy Bites & Gels</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#f4f1e8;
-    --ink:#1c221a;
-    --muted:#5a6355;
-    --accent:#b8541f;
-    --accent-soft:#e8b894;
-    --accent-deep:#7a3612;
-    --berry:#7a2e4a;
-    --cream:#fffbf1;
-    --card:#fffdf5;
-    --line:#d6d1bf;
-    --good:#3a6b35;
-    --bad:#a8341f;
-    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(28,34,26,.07);
+    --bg:#faf9f7;--black:#000;--white:#fff;
+    --oat:#dad4c8;--oat-lt:#eee9df;--muted:#9f9b93;--charcoal:#55534e;
+    --slushie-300:#9eeeff;--slushie-500:#3bd3fd;--slushie-800:#0089ad;
+    --matcha-600:#078a52;--bad:#a8341f;--good:#3a6b35;
+    --shadow-clay:rgba(0,0,0,.1) 0px 1px 1px,rgba(0,0,0,.04) 0px -1px 1px inset,rgba(0,0,0,.05) 0px -0.5px 1px;
+    --shadow-hard:rgb(0,0,0) -7px 7px;
+    --font:'Plus Jakarta Sans',Arial,sans-serif;--mono:'Space Mono',monospace;
+    /* semantic aliases */
+    --ink:var(--black);--accent:var(--slushie-800);--accent-soft:#d0f5ff;--accent-deep:#005e7a;--card:var(--white);--line:var(--oat);--shadow:var(--shadow-clay);
+    --berry:#43089f;
   }
   *{box-sizing:border-box}
-  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Iowan Old Style',serif;line-height:1.6}
-  .wrap{max-width:980px;margin:0 auto;padding:48px 28px 96px}
-  header.hero{
-    text-align:center;
-    padding:56px 24px 48px;
-    border-bottom:1px solid var(--line);
-    margin-bottom:48px;
-    background:
-      radial-gradient(ellipse at top, rgba(184,84,31,.10), transparent 60%),
-      var(--bg);
-  }
-  .eyebrow{
-    text-transform:uppercase;
-    letter-spacing:.22em;
-    font-size:12px;
-    color:var(--accent);
-    font-family:'Helvetica Neue',Arial,sans-serif;
-    font-weight:700;
-    margin-bottom:14px;
-  }
-  h1{
-    font-size:54px;
-    line-height:1.05;
-    margin:0 0 18px;
-    letter-spacing:-.02em;
-  }
-  .sub{
-    font-size:19px;
-    color:var(--muted);
-    max-width:660px;
-    margin:0 auto;
-    font-style:italic;
-  }
-  h2{
-    font-size:32px;
-    margin:64px 0 8px;
-    letter-spacing:-.01em;
-    border-top:2px solid var(--ink);
-    padding-top:28px;
-  }
-  h2 .num{
-    display:inline-block;
-    font-family:'Helvetica Neue',Arial,sans-serif;
-    font-size:13px;
-    color:var(--accent);
-    letter-spacing:.2em;
-    text-transform:uppercase;
-    vertical-align:middle;
-    margin-right:14px;
-    padding:4px 10px;
-    border:1px solid var(--accent);
-    border-radius:999px;
-  }
-  h3{font-size:21px;margin:32px 0 8px;color:var(--ink)}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
+  nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--oat);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .nav-logo{font-family:var(--mono);font-size:14px;font-weight:700;text-decoration:none;color:var(--black)}
+  .nav-links{display:flex;gap:8px}
+  .nav-links a{font-size:15px;font-weight:500;color:var(--charcoal);text-decoration:none;padding:6px 14px;border-radius:1584px;transition:background .15s}
+  .nav-links a:hover{background:var(--oat-lt);color:var(--black)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 40px 96px}
+  header.hero{text-align:center;padding:80px 24px 64px;border-bottom:1px solid var(--oat);margin-bottom:56px}
+  .eyebrow{display:inline-block;font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.08px;color:var(--muted);border:1px dashed var(--oat);padding:4px 14px;border-radius:1584px;margin-bottom:24px}
+  h1{font-size:clamp(44px,6vw,72px);font-weight:600;line-height:1.0;letter-spacing:-2.4px;font-feature-settings:"ss01","ss03","ss10","ss11","ss12";margin:0 0 20px}
+  .sub{font-size:20px;font-weight:400;line-height:1.4;color:var(--muted);max-width:620px;margin:0 auto}
+  h2{font-size:clamp(26px,3.5vw,36px);font-weight:600;letter-spacing:-0.88px;font-feature-settings:"ss01","ss03","ss10","ss11","ss12";margin:72px 0 8px;padding-top:32px;border-top:1px solid var(--oat)}
+  h2 .num{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--slushie-800);letter-spacing:.12em;text-transform:uppercase;vertical-align:middle;margin-right:12px;padding:3px 10px;border:1px solid var(--slushie-500);border-radius:1584px;background:rgba(59,211,253,.12)}
+  h3{font-size:20px;font-weight:600;letter-spacing:-0.4px;margin:32px 0 8px;font-feature-settings:"ss01","ss03","ss10","ss11","ss12"}
   p{margin:10px 0 16px}
-  .lede{font-size:18px;color:var(--muted);max-width:720px}
-
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
-    margin:24px 0;
-  }
-  .card{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:10px;
-    padding:20px 22px;
-    box-shadow:var(--shadow);
-  }
-  .card h4{
-    margin:0 0 8px;
-    font-size:15px;
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    font-family:'Helvetica Neue',Arial,sans-serif;
-  }
-  .card p{margin:6px 0;font-size:15px;color:var(--muted)}
-  .card .stat{
-    font-family:'Helvetica Neue',Arial,sans-serif;
-    font-size:32px;
-    color:var(--accent);
-    font-weight:700;
-    display:block;
-    margin:6px 0 2px;
-    letter-spacing:-.01em;
-  }
-
-  table{
-    width:100%;
-    border-collapse:collapse;
-    margin:24px 0;
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:var(--shadow);
-    font-size:15px;
-  }
-  th, td{
-    padding:14px 16px;
-    text-align:left;
-    border-bottom:1px solid var(--line);
-    vertical-align:top;
-  }
-  th{
-    background:#eae6d2;
-    font-family:'Helvetica Neue',Arial,sans-serif;
-    text-transform:uppercase;
-    font-size:12px;
-    letter-spacing:.08em;
-  }
+  .lede{font-size:18px;line-height:1.6;color:var(--charcoal);max-width:720px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0}
+  .card{background:var(--white);border:1px solid var(--oat);border-radius:24px;padding:24px;box-shadow:var(--shadow-clay)}
+  .card h4{margin:0 0 4px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.08px;font-family:var(--mono);color:var(--muted)}
+  .card p{margin:4px 0 0;font-size:14px;color:var(--muted)}
+  .card .stat{font-size:36px;font-weight:600;color:var(--slushie-800);display:block;margin:6px 0 2px;letter-spacing:-1.2px;font-feature-settings:"ss01","ss03","ss10","ss11","ss12"}
+  table{width:100%;border-collapse:collapse;margin:24px 0;background:var(--white);border:1px solid var(--oat);border-radius:24px;overflow:hidden;box-shadow:var(--shadow-clay);font-size:15px}
+  th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--oat);vertical-align:top}
+  th{background:var(--oat-lt);font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
   tr:last-child td{border-bottom:none}
-
-  .callout{
-    margin:24px 0;
-    padding:18px 22px;
-    border-left:4px solid var(--accent);
-    background:#f7ece2;
-    border-radius:0 8px 8px 0;
-  }
-  .callout.warn{
-    border-left-color:var(--bad);
-    background:#fbe7e2;
-  }
-  .callout.good{
-    border-left-color:var(--good);
-    background:#e4efda;
-  }
-  .callout strong{font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:13px;display:block;margin-bottom:6px}
-
-  .vs{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
-    margin:24px 0;
-  }
-  .vs > div{
-    padding:22px 24px;
-    border-radius:10px;
-    border:1px solid var(--line);
-    background:var(--card);
-    box-shadow:var(--shadow);
-  }
-  .vs .a-side{border-top:4px solid #c9a24a}
-  .vs .b-side{border-top:4px solid var(--accent)}
-  .vs h4{
-    margin:0 0 6px;
-    font-family:'Helvetica Neue',Arial,sans-serif;
-    text-transform:uppercase;
-    font-size:13px;
-    letter-spacing:.08em;
-  }
-  .vs .tag{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
-  .vs ul{margin:10px 0 0 0;padding-left:18px;color:var(--muted);font-size:15px}
+  .callout{margin:24px 0;padding:20px 24px;border-left:4px solid var(--slushie-500);background:rgba(59,211,253,.08);border-radius:0 12px 12px 0}
+  .callout.warn{border-left-color:var(--bad);background:rgba(168,52,31,.07)}
+  .callout.good{border-left-color:var(--good);background:rgba(58,107,53,.08)}
+  .callout strong{font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:6px;color:var(--slushie-800)}
+  .callout.warn strong{color:var(--bad)}
+  .callout.good strong{color:var(--good)}
+  .vs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+  .vs > div{padding:22px 24px;border-radius:24px;border:1px solid var(--oat);background:var(--white);box-shadow:var(--shadow-clay)}
+  .vs .a-side{border-top:4px solid var(--slushie-300)}
+  .vs .b-side{border-top:4px solid var(--slushie-800)}
+  .vs h4{margin:0 0 6px;font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+  .vs .tag{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-family:var(--mono)}
+  .vs ul{margin:10px 0 0 0;padding-left:18px;color:var(--charcoal);font-size:15px}
   .vs li{margin:6px 0}
-
-  /* Cost comparison bars */
-  .bars{margin:24px 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;box-shadow:var(--shadow)}
-  .bars h4{margin:0 0 18px;font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.08em}
+  /* Cost bars */
+  .bars{margin:24px 0;background:var(--white);border:1px solid var(--oat);border-radius:24px;padding:24px;box-shadow:var(--shadow-clay)}
+  .bars h4{margin:0 0 18px;font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
   .bar-row{display:grid;grid-template-columns:170px 1fr 80px;gap:12px;align-items:center;margin:10px 0;font-size:14px}
-  .bar-row .label{color:var(--muted);font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;font-size:12px;letter-spacing:.06em}
-  .bar-row .track{background:#ece8d4;height:18px;border-radius:99px;overflow:hidden}
-  .bar-row .fill{height:100%;border-radius:99px}
-  .bar-row .val{font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--accent-deep);text-align:right}
-  .fill.spring{background:#c9a24a;width:100%}
-  .fill.maurten{background:#b8894a;width:100%}
-  .fill.mure{background:#a89060;width:82%}
-  .fill.bite{background:var(--accent);width:11%}
-  .fill.homegel{background:var(--accent);width:14%}
-
+  .bar-row .label{color:var(--charcoal);font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+  .bar-row .track{background:var(--oat-lt);height:18px;border-radius:1584px;overflow:hidden}
+  .bar-row .fill{height:100%;border-radius:1584px}
+  .bar-row .val{font-family:var(--mono);font-size:13px;color:var(--slushie-800);text-align:right;font-weight:700}
+  .fill.spring{background:var(--oat);width:100%}
+  .fill.maurten{background:#c4dde8;width:100%}
+  .fill.mure{background:#aacfdb;width:82%}
+  .fill.bite{background:var(--slushie-500);width:11%}
+  .fill.homegel{background:var(--slushie-500);width:14%}
   /* Recipe cards */
-  .recipe{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:28px 30px;
-    margin:28px 0;
-    box-shadow:var(--shadow);
-    position:relative;
-  }
-  .recipe .rtag{
-    display:inline-block;
-    font-family:'Helvetica Neue',Arial,sans-serif;
-    font-size:11px;
-    letter-spacing:.2em;
-    text-transform:uppercase;
-    color:var(--cream);
-    background:var(--accent);
-    padding:4px 12px;
-    border-radius:99px;
-    margin-bottom:10px;
-  }
+  .recipe{background:var(--white);border:1px solid var(--oat);border-radius:24px;padding:28px 30px;margin:28px 0;box-shadow:var(--shadow-clay);position:relative}
+  .recipe .rtag{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:1.08px;text-transform:uppercase;color:var(--white);background:var(--slushie-800);padding:4px 12px;border-radius:1584px;margin-bottom:10px}
   .recipe.bites .rtag{background:var(--accent-deep)}
   .recipe.gels .rtag{background:var(--berry)}
-  .recipe h3{margin:0 0 4px;font-size:24px}
-  .recipe .desc{color:var(--muted);font-size:15px;font-style:italic;margin:0 0 18px}
-  .recipe .ingredients{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:10px;
-    margin:18px 0;
-  }
-  .recipe .ing{
-    display:flex;
-    align-items:flex-start;
-    gap:10px;
-    padding:10px 12px;
-    background:#f9f5e6;
-    border-radius:8px;
-    font-size:14px;
-  }
-  .recipe .ing .dot{
-    width:10px;height:10px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px;
-  }
-  .recipe .ing b{display:block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+  .recipe h3{margin:0 0 4px;font-size:24px;font-weight:600;letter-spacing:-0.5px;font-feature-settings:"ss01","ss03","ss10","ss11","ss12"}
+  .recipe .desc{color:var(--muted);font-size:15px;margin:0 0 18px}
+  .recipe .ingredients{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:18px 0}
+  .recipe .ing{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:rgba(59,211,253,.07);border-radius:12px;border:1px solid rgba(59,211,253,.2);font-size:14px}
+  .recipe .ing .dot{width:10px;height:10px;border-radius:50%;background:var(--slushie-500);flex-shrink:0;margin-top:6px}
+  .recipe .ing b{display:block;font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
   .recipe .ing span{color:var(--muted);font-size:13px}
-  .recipe .method{
-    margin-top:14px;
-    padding-top:16px;
-    border-top:1px dashed var(--line);
-    font-size:14px;
-    color:var(--muted);
-  }
-  .recipe .method b{color:var(--ink);font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;font-size:12px;letter-spacing:.08em;display:block;margin-bottom:6px}
-  .recipe .macros{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-    gap:10px;
-    margin-top:16px;
-  }
-  .recipe .macro{
-    text-align:center;
-    padding:12px 8px;
-    background:#f1ecd9;
-    border-radius:8px;
-  }
-  .recipe .macro b{display:block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:20px;color:var(--accent-deep)}
-  .recipe .macro span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-
+  .recipe .method{margin-top:14px;padding-top:16px;border-top:1px dashed var(--oat);font-size:14px;color:var(--charcoal)}
+  .recipe .method b{color:var(--black);font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:6px}
+  .recipe .macros{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:16px}
+  .recipe .macro{text-align:center;padding:12px 8px;background:rgba(59,211,253,.08);border-radius:12px;border:1px solid rgba(59,211,253,.2)}
+  .recipe .macro b{display:block;font-size:20px;font-weight:600;color:var(--slushie-800);letter-spacing:-0.5px;font-feature-settings:"ss01","ss03","ss10","ss11","ss12"}
+  .recipe .macro span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-family:var(--mono)}
   /* Ingredient map */
-  .fiber-map{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:14px;
-    margin:24px 0;
-  }
-  .fiber-map .fm{
-    padding:16px 18px;
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:10px;
-    text-align:center;
-    box-shadow:var(--shadow);
-  }
-  .fiber-map .fm .icon{
-    font-size:28px;
-    display:block;
-    margin-bottom:6px;
-  }
-  .fiber-map .fm b{
-    display:block;
-    font-family:'Helvetica Neue',Arial,sans-serif;
-    font-size:13px;
-    text-transform:uppercase;
-    letter-spacing:.06em;
-    margin-bottom:4px;
-  }
+  .fiber-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:24px 0}
+  .fiber-map .fm{padding:16px 18px;background:var(--white);border:1px solid var(--oat);border-radius:24px;text-align:center;box-shadow:var(--shadow-clay)}
+  .fiber-map .fm .icon{font-size:28px;display:block;margin-bottom:6px}
+  .fiber-map .fm b{display:block;font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
   .fiber-map .fm span{font-size:13px;color:var(--muted)}
-
-  /* Zone chart */
-  .ramp{
-    margin:24px 0;
-    padding:24px 28px;
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:10px;
-    box-shadow:var(--shadow);
-  }
-  .ramp h4{margin:0 0 16px;font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.08em}
+  /* Zone / ramp chart */
+  .ramp{margin:24px 0;padding:24px 28px;background:var(--white);border:1px solid var(--oat);border-radius:24px;box-shadow:var(--shadow-clay)}
+  .ramp h4{margin:0 0 16px;font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
   .ramp-track{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
-  .ramp-step{
-    padding:14px;
-    background:#f1ecd9;
-    border-radius:8px;
-    text-align:center;
-    position:relative;
-  }
-  .ramp-step .w{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase}
-  .ramp-step b{display:block;font-size:15px;margin:4px 0}
+  .ramp-step{padding:14px;background:rgba(59,211,253,.07);border-radius:12px;border:1px solid rgba(59,211,253,.15);text-align:center;position:relative}
+  .ramp-step .w{font-family:var(--mono);font-size:11px;color:var(--slushie-800);font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+  .ramp-step b{display:block;font-size:15px;font-weight:600;margin:4px 0}
   .ramp-step span{font-size:12px;color:var(--muted)}
-  .ramp-step:nth-child(2){background:#f3e0cc}
-  .ramp-step:nth-child(3){background:#eecba8}
-
-  footer{
-    margin-top:80px;
-    padding-top:28px;
-    border-top:1px solid var(--line);
-    text-align:center;
-    font-size:14px;
-    color:var(--muted);
-    font-style:italic;
-  }
-
-  .pull{
-    font-family:Georgia,serif;
-    font-size:24px;
-    line-height:1.4;
-    color:var(--ink);
-    font-style:italic;
-    margin:32px auto;
-    padding:16px 28px;
-    border-left:3px solid var(--accent);
-    max-width:780px;
-  }
-
-  @media (max-width:640px){
-    h1{font-size:38px}
-    h2{font-size:25px}
-    .vs{grid-template-columns:1fr}
-    .ramp-track{grid-template-columns:1fr}
-    .bar-row{grid-template-columns:110px 1fr 60px}
-    .wrap{padding:24px 18px 64px}
-  }
+  .ramp-step:nth-child(2){background:rgba(59,211,253,.12);border-color:rgba(59,211,253,.25)}
+  .ramp-step:nth-child(3){background:rgba(59,211,253,.18);border-color:rgba(59,211,253,.35)}
+  .pull{font-family:var(--font);font-size:22px;font-weight:500;line-height:1.4;color:var(--charcoal);margin:32px auto;padding:20px 28px;border-left:4px solid var(--slushie-500);background:rgba(59,211,253,.06);border-radius:0 12px 12px 0;max-width:780px}
+  footer{margin:80px 0 0;padding:40px 48px;border-radius:40px;border:1px dashed var(--oat);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  footer .f-brand{font-family:var(--mono);font-size:13px;font-weight:700}
+  footer p{font-size:13px;color:var(--muted);font-family:var(--mono);margin:0}
+  @media(max-width:767px){nav{padding:0 20px}.wrap{padding:0 20px 64px}h2{font-size:26px}.vs{grid-template-columns:1fr}.ramp-track{grid-template-columns:1fr}.bar-row{grid-template-columns:110px 1fr 60px}footer{padding:28px 24px;flex-direction:column}}
 </style>
 </head>
 <body>
+
+<nav>
+  <a class="nav-logo" href="index.html">visual-guides</a>
+  <div class="nav-links">
+    <a href="cotton-quality-guide.html">Cotton</a>
+    <a href="gut-drink-guide.html">Gut Shake</a>
+    <a href="diy-running-nutrition-guide.html" style="background:rgba(59,211,253,.15);color:var(--slushie-800)">Running</a>
+  </div>
+</nav>
+
 <div class="wrap">
 
 <header class="hero">
@@ -558,7 +335,8 @@
 <div class="pull">"This is even better than I originally thought — same carbs, same feeling on the run, one-tenth the cost."</div>
 
 <footer>
-  Visual summary of a DIY endurance nutrition recipe video — not a medical or sports nutrition prescription. Dial in your own gut tolerance on training runs, not race day.
+  <span class="f-brand">visual-guides / running-nutrition</span>
+  <p>Educational guide — not a sports nutrition prescription. Made with care by a human + Claude.</p>
 </footer>
 
 </div>
